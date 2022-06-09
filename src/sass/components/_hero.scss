@@ -1,0 +1,47 @@
+.hero {
+  height: 502px;
+  background-color: $hero-bck;
+}
+
+.hero-text {
+  width: 218px;
+  max-width: 100%;
+
+  &__title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    @include fontTitanOne(
+      $familyTitanOne,
+      26px,
+      400,
+      30px,
+      0.04em,
+      $primary-text-color
+    );
+  }
+
+  &--accent {
+    @include fontTitanOne(null, 48px, null, 46px, null, $accent-color, null);
+  }
+}
+
+.crema-pic {
+  display: none;
+}
+.circle-pic {
+  display: none;
+}
+.milk-pic {
+  display: none;
+}
+.milk-info {
+  display: none;
+}
+.block-amount {
+  display: none;
+}
+.block-amount__subtitle {
+}
+.cta-img {
+  display: none;
+}
