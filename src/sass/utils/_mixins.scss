@@ -1,13 +1,23 @@
-@mixin fontRegular($ff, $fz, $fw, $lh, $col, $ta: left) {
+@mixin fontRegular($ff, $fz, $fw, $lh, $col, $ta: left, $tt: none) {
   font-family: $ff;
   font-size: $fz;
   font-weight: $fw;
   line-height: calc($lh / $fz);
   color: $col;
   text-align: $ta;
+  text-transform: $tt;
 }
 
-@mixin fontTitanOne($familyTitanOne, $fz, $fw, $lh, $ls, $col, $ta: left) {
+@mixin fontTitanOne(
+  $familyTitanOne,
+  $fz,
+  $fw,
+  $lh,
+  $ls,
+  $col,
+  $ta: left,
+  $tt: none
+) {
   font-family: $familyTitanOne;
   font-size: $fz;
   font-weight: $fw;
@@ -15,6 +25,7 @@
   letter-spacing: $ls;
   color: $col;
   text-align: $ta;
+  text-transform: $tt;
 }
 
 @mixin centeredFlex($type, $align: center, $justity: center) {
