@@ -1,11 +1,15 @@
 .hero {
+  position: relative;
   height: 502px;
   background-color: $hero-bck;
 }
 
 .hero-text {
+  position: absolute;
+  z-index: 10;
   width: 218px;
   max-width: 100%;
+  padding-top: 194px;
 
   &__title {
     margin-bottom: 20px;
@@ -26,8 +30,11 @@
 }
 
 .crema-pic {
-  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 12px;
 }
+
 .circle-pic {
   display: none;
 }
