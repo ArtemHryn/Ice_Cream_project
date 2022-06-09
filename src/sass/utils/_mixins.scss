@@ -2,7 +2,7 @@
   font-family: $ff;
   font-size: $fz;
   font-weight: $fw;
-  line-height: $lh/$fz;
+  line-height: calc($lh / $fz);
   color: $col;
   text-align: $ta;
 }
