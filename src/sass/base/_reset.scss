@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -54,4 +55,10 @@ button {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
+}
+
+.no-scroll {
+    @media screen and (max-width: 767px) {
+  overflow: hidden;
+  }
 }
