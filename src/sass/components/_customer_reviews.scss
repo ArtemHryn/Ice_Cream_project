@@ -1,5 +1,5 @@
 .customer-reviews {
-  min-width: 320px;
+  min-width: 80vw;
   margin: auto;
 }
 .wrapper {
@@ -38,17 +38,8 @@
 .slick-slide.slick-center {
 }
 
-/* Точки */
-.slick-dots {
-}
-.slick-dots li {
-}
-.slick-dots button {
-}
-
 /* Конкретный слайдер */
 .slider {
-  padding: 0px 10px;
 }
 
 .slick-dots {
@@ -90,9 +81,12 @@
   text-align: center;
   margin: auto;
   background-color: $customer_reviews_background;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.55;
 }
 
-.customer-reviews__article{
+.customer-reviews__article {
   display: flex;
   justify-content: center;
   align-items: center;

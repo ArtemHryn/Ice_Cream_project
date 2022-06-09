@@ -9,5 +9,14 @@ $(document).ready(function () {
     autoplaySpeed: 800,
     mobileFirst: true,
     pauseOnDotsHover: true,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 400,
+        settings: {
+          variableWidth: false,
+        },
+      },
+    ],
   });
 });
