@@ -1,0 +1,22 @@
+.advantages {
+    padding-bottom: 80px;
+    background-color: $footer-bck;
+}
+.advantages-list__number {
+    font-family: $familyTitanOne;
+    font-size: 36px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $accent-color;
+    margin-bottom: 13px;
+    }
+.advantages-list__text {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.7;
+    color: $secondary-text-color;
+    }
+.advantages-list__item:not(:last-child) {
+    margin-bottom: 32px;
+}
