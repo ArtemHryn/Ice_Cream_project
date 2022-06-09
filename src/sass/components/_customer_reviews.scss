@@ -1,10 +1,10 @@
 .customer-reviews {
+  padding-top: 80px;
+  padding-bottom: 48px;
   margin: auto;
 }
 .wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centeredFlex();
   width: 89vw;
 }
 
@@ -21,15 +21,11 @@
 }
 /* Лента слайдов */
 .slick-track {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  @include centeredFlex();
 }
 
 .slick-dots {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centeredFlex();
 }
 .slick-dots li {
   overflow: hidden;
@@ -57,20 +53,33 @@
 
 .slider__item {
   text-align: center;
+}
 
+.customer-reviews__photo {
+  margin-bottom: 32px;
+}
+
+.customer-reviews__desc-wrapper {
+  @include centeredFlex();
+  padding: 43px 65px 17px 58px;
+  width: 100vw;
+  background-color: $customer_reviews_background;
 }
 
 .customer-reviews__description {
+  @include fontRegular(null, 12px, 500, 31px, $secondary-text-color, center);
+  @include centeredFlex();
   position: relative;
-  width: 82vw;
-  padding: 43px 65px 25px 58px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $customer_reviews_background;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 2.55;
+  width: 50vw;
+
+  margin-bottom: 16px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 30px,
+    $contacts-line-color 30px,
+    $contacts-line-color 31px
+  );
   // &::before {
   //   position: absolute;
   //   content: '';
@@ -89,8 +98,16 @@
 }
 
 .customer-reviews__article {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centeredFlex();
   flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.customer-reviews__more {
+  margin-bottom: 16px;
+}
+
+.customer-reviews__name-city {
+  @include fontRegular(null, 14px, 500, 26px, $secondary-text-color, center);
+  margin-bottom: 16px;
 }
