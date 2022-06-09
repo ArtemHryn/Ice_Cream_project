@@ -133,6 +133,18 @@ background: $about-bck;
 }
 
 .contacts-button {
+    
 
+    &--red {
+        
+        color: #FFFFFF;
+        background: #D41342;
+        border-radius: 22px;
+    }
+    &--white {
+        color: #D41443;
+        background: #FFFFFF;
+        border-radius: 22px;
+    }
 }
 
