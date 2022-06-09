@@ -1,26 +1,29 @@
 .customer-reviews {
-  min-width: 80vw;
   margin: auto;
 }
 .wrapper {
-  padding: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 89vw;
 }
 
 /* Слайдер */
 .slick-slider {
   min-width: 0;
+  margin: auto;
 }
 
 /* Ограничивающая оболочка */
 .slick-list {
   overflow: hidden;
+  margin: auto;
 }
 /* Лента слайдов */
 .slick-track {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .slick-dots {
@@ -54,22 +57,34 @@
 
 .slider__item {
   text-align: center;
+
 }
 
 .customer-reviews__description {
-  max-width: 80vw;
-  padding: 43px 61px 25px;
-  text-align: center;
-  margin: auto;
+  position: relative;
+  width: 82vw;
+  padding: 43px 65px 25px 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: $customer_reviews_background;
   font-weight: 500;
   font-size: 12px;
   line-height: 2.55;
-  &::before {
-    content: '';
-  }
+  // &::before {
+  //   position: absolute;
+  //   content: '';
+  //   top: 10vw;
+  //   left: 4vw;
+  //   display: inline-block;
+  //   width: 54px;
+  //   height: 40px;
+  //   background-image: url("../images/quotes.svg");
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  // }
   @media screen and (min-width: $min-tablet-size) {
-
   }
 }
 

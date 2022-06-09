@@ -22,3 +22,9 @@
   align-items: $align;
   justify-content: $justity;
 }
+
+@mixin transition($tp, $td: 250ms, $ttf: cubic-bezier(0.4, 0, 0.2, 1)) {
+  transition-property: $tp;
+  transition-duration: $td;
+  transition-timing-function: $ttf;
+}
