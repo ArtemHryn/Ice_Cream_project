@@ -1,54 +1,29 @@
 .customer-reviews {
-  min-width: 320px;
   margin: auto;
 }
 .wrapper {
-  padding: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 89vw;
 }
-
-/* Основные стили */
 
 /* Слайдер */
 .slick-slider {
   min-width: 0;
+  margin: auto;
 }
 
 /* Ограничивающая оболочка */
 .slick-list {
   overflow: hidden;
+  margin: auto;
 }
 /* Лента слайдов */
 .slick-track {
   display: flex;
-}
-
-/* Слайд */
-.slick-slide {
-}
-/* Слайд активный */
-.slick-slide.slick-active {
-}
-/* Слайд основной */
-.slick-slide.slick-current {
-}
-/* Слайд по центру */
-.slick-slide.slick-center {
-}
-
-/* Точки */
-.slick-dots {
-}
-.slick-dots li {
-}
-.slick-dots button {
-}
-
-/* Конкретный слайдер */
-.slider {
-  padding: 0px 10px;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .slick-dots {
@@ -82,17 +57,38 @@
 
 .slider__item {
   text-align: center;
+
 }
 
 .customer-reviews__description {
-  max-width: 280px;
-  padding: 43px 61px 25px;
-  text-align: center;
-  margin: auto;
+  position: relative;
+  width: 82vw;
+  padding: 43px 65px 25px 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: $customer_reviews_background;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.55;
+  // &::before {
+  //   position: absolute;
+  //   content: '';
+  //   top: 10vw;
+  //   left: 4vw;
+  //   display: inline-block;
+  //   width: 54px;
+  //   height: 40px;
+  //   background-image: url("../images/quotes.svg");
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  // }
+  @media screen and (min-width: $min-tablet-size) {
+  }
 }
 
-.customer-reviews__article{
+.customer-reviews__article {
   display: flex;
   justify-content: center;
   align-items: center;
