@@ -2,6 +2,17 @@
   background-color: $footer-bck;
   padding-bottom: 20px;
 }
+.page-footer__content {
+  margin-bottom: 40px;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+  }
+}
+.page-footer__text-thumb {
+  margin-bottom: 40px;
+}
 .page-footer__text {
   margin-bottom: 16px;
   @include fontTitanOne(
@@ -13,18 +24,24 @@
     $hero-ice-cream-bck
   );
   text-transform: uppercase;
+  @include tablet {
+    margin-bottom: 12px;
+    @include fontTitanOne(null, 26px, null, 30px, null, null);
+  }
 }
 .page-footer__title {
-  margin-bottom: 40px;
+  text-transform: uppercase;
   @include fontTitanOne(
     $familyTitanOne,
-    48px,
+    34px,
     400,
-    55px,
+    39px,
     0.06em,
     $accent-color
   );
-  text-transform: uppercase;
+  @include tablet {
+    @include fontTitanOne(null, 48px, null, 55px, null, null);
+  }
 }
 .soc-media {
   margin-bottom: 40px;
@@ -36,12 +53,16 @@
   }
   width: 32px;
   height: 32px;
+  @include tablet {
+    width: 34px;
+    height: 34px;
+  }
 }
 .soc-media__link {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #fea5bb;
+  background-color: $soc-media-bck;
   @include centeredFlex(flex);
   color: $primary-text-color;
   &:hover,
@@ -53,7 +74,6 @@
   fill: currentColor;
 }
 .page-footer__contacts {
-  margin-bottom: 40px;
   @include fontRegular(
     $familyDmSans,
     12px,
@@ -63,6 +83,10 @@
     right
   );
   letter-spacing: 0.02em;
+
+  @include tablet {
+    @include fontRegular(null, 14px, null, 26px, null, null);
+  }
 }
 .page-footer__number {
   color: $accent-color;
@@ -78,4 +102,8 @@
     $description-text-color,
     center
   );
+  @include tablet {
+    @include fontRegular(null, 14px, null, 26px, null, null);
+    letter-spacing: 0.02em;
+  }
 }
