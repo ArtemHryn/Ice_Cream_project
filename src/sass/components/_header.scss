@@ -11,6 +11,9 @@
   @media screen and (min-width: 768px) {
     margin-top: 32px;
   }
+  @media screen and (min-width: 1280px) {
+    margin-top: 37px;
+  }
 }
 
 .logo {
@@ -27,6 +30,9 @@
   border: 0;
   background-color: transparent;
   cursor: pointer;
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
 }
 
 .close-button {
@@ -39,6 +45,9 @@
   border: 0;
   background-color: transparent;
   cursor: pointer;
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
 }
 
 .menu-button__container {
@@ -46,6 +55,9 @@
   margin-left: auto;
   @media screen and (min-width: 768px) {
     margin-right: 32px;
+  }
+  @media screen and (min-width: 1280px) {
+    display: none;
   }
 }
 
@@ -104,6 +116,9 @@
   @media screen and(min-width: 768px) {
     width: 186px;
   }
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
 }
 
 .buy-button__header {
@@ -111,6 +126,12 @@
   height: 44px;
   @media screen and (max-width: 767px) {
     display: none;
+  }
+}
+
+.nav-list {
+  @media screen and (min-width: 1280px) {
+    display: flex;
   }
 }
 
@@ -128,6 +149,13 @@
   display: block;
   padding: 13px 20px 11px 20px;
   @include fontRegular('DM Sans', 14px, 700, 18px, $primary-text-color, null);
+  @media screen and (min-width: 1280px) {
+    padding: 15px;
+  }
+  &:hover,
+  &:focus {
+    color: $heroButtonDarkPink;
+  }
 }
 
 .menu-container {
@@ -145,6 +173,11 @@
     @media screen and(min-width: 480px) {
       width: 254px;
     }
+  }
+  @media screen and (min-width: 1280px) {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
 
