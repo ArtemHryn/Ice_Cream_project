@@ -1,0 +1,32 @@
+// hero button
+.button {
+  @include centeredFlex(inline-flex);
+  height: 24px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 0;
+  padding-top: 0;
+  @include fontRegular(null, 8px, null, 10px, #ffffff, null);
+
+  border-style: none;
+  border-radius: 20px;
+
+  background-color: $heroButtonDarkPink;
+  cursor: pointer;
+
+  &--white {
+    margin-left: 8px;
+    background-color: $heroButtonWhite;
+    color: $heroButtonWhiteTx;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $heroBtnHover;
+  }
+
+  &--white:hover,
+  &--white:focus {
+    background-color: $heroBtnHoverWhite;
+  }
+}
