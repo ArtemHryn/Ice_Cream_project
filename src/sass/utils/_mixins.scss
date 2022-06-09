@@ -2,7 +2,7 @@
   font-family: $ff;
   font-size: $fz;
   font-weight: $fw;
-  line-height: calc($lh / $fz);
+  line-height: $lh / $fz;
   color: $col;
   text-align: $ta;
   text-transform: $tt;
@@ -21,7 +21,7 @@
   font-family: $familyTitanOne;
   font-size: $fz;
   font-weight: $fw;
-  line-height: calc($lh / $fz);
+  line-height: $lh / $fz;
   letter-spacing: $ls;
   color: $col;
   text-align: $ta;
