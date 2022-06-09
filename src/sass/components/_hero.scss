@@ -6,14 +6,14 @@
 
 .hero-text {
   position: absolute;
-  z-index: 10;
   width: 218px;
   max-width: 100%;
   padding-top: 194px;
+  z-index: 10;
+  text-transform: uppercase;
 
   &__title {
     margin-bottom: 20px;
-    text-transform: uppercase;
     @include fontTitanOne(
       $familyTitanOne,
       26px,
