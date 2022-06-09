@@ -9,6 +9,8 @@ $(document).ready(function () {
     autoplaySpeed: 800,
     mobileFirst: true,
     pauseOnDotsHover: true,
+    pauseOnFocus: true,
+    pauseOnHover: true,
     variableWidth: true,
     responsive: [
       {

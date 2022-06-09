@@ -9,8 +9,6 @@
   align-items: center;
 }
 
-/* Основные стили */
-
 /* Слайдер */
 .slick-slider {
   min-width: 0;
@@ -23,23 +21,6 @@
 /* Лента слайдов */
 .slick-track {
   display: flex;
-}
-
-/* Слайд */
-.slick-slide {
-}
-/* Слайд активный */
-.slick-slide.slick-active {
-}
-/* Слайд основной */
-.slick-slide.slick-current {
-}
-/* Слайд по центру */
-.slick-slide.slick-center {
-}
-
-/* Конкретный слайдер */
-.slider {
 }
 
 .slick-dots {
@@ -76,7 +57,7 @@
 }
 
 .customer-reviews__description {
-  max-width: 280px;
+  max-width: 80vw;
   padding: 43px 61px 25px;
   text-align: center;
   margin: auto;
@@ -84,6 +65,12 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 2.55;
+  &::before {
+    content: '';
+  }
+  @media screen and (min-width: $min-tablet-size) {
+
+  }
 }
 
 .customer-reviews__article {

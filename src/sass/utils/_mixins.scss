@@ -11,7 +11,7 @@
   font-family: $familyTitanOne;
   font-size: $fz;
   font-weight: $fw;
-  line-height: $lh/$fz;
+  line-height: calc($lh / $fz);
   letter-spacing: $ls;
   color: $col;
   text-align: $ta;
@@ -22,4 +22,3 @@
   align-items: $align;
   justify-content: $justity;
 }
-
