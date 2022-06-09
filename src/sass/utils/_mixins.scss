@@ -17,7 +17,7 @@
   text-align: $ta;
 }
 
-@mixin centeredFlex($type, $align: center, $justity: center) {
+@mixin centeredFlex($type: flex, $align: center, $justity: center) {
   display: $type;
   align-items: $align;
   justify-content: $justity;
