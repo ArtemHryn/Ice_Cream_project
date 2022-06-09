@@ -34,16 +34,20 @@
   &:not(:first-child) {
     margin-left: 29px;
   }
-  background-color: #fea5bb;
   width: 32px;
   height: 32px;
-  border-radius: 50%;
 }
 .soc-media__link {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
+  background-color: #fea5bb;
   @include centeredFlex(flex);
   color: $primary-text-color;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
 }
 .soc-media__icon {
   fill: currentColor;
