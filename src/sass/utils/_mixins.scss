@@ -2,7 +2,7 @@
   font-family: $ff;
   font-size: $fz;
   font-weight: $fw;
-  line-height: $lh / $fz;
+  line-height: calc($lh / $fz);
   color: $col;
   text-align: $ta;
 }
@@ -11,7 +11,7 @@
   font-family: $familyTitanOne;
   font-size: $fz;
   font-weight: $fw;
-  line-height: $lh / $fz;
+  line-height: calc($lh / $fz);
   letter-spacing: $ls;
   color: $col;
   text-align: $ta;
@@ -21,4 +21,10 @@
   display: $type;
   align-items: $align;
   justify-content: $justity;
+}
+
+@mixin transition($tp, $td: 250ms, $ttf: cubic-bezier(0.4, 0, 0.2, 1)) {
+  transition-property: $tp;
+  transition-duration: $td;
+  transition-timing-function: $ttf;
 }

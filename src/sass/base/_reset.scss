@@ -52,6 +52,11 @@ ol {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  font-style: normal;
+}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -66,7 +71,7 @@ ol {
 }
 
 .no-scroll {
-    @media screen and (max-width: 767px) {
-  overflow: hidden;
+  @media screen and (max-width: 767px) {
+    overflow: hidden;
   }
 }
