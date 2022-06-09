@@ -1,0 +1,81 @@
+.page-footer {
+  background-color: $footer-bck;
+  padding-bottom: 20px;
+}
+.page-footer__text {
+  margin-bottom: 16px;
+  @include fontTitanOne(
+    $familyTitanOne,
+    18px,
+    400,
+    21px,
+    0.04em,
+    $hero-ice-cream-bck
+  );
+  text-transform: uppercase;
+}
+.page-footer__title {
+  margin-bottom: 40px;
+  @include fontTitanOne(
+    $familyTitanOne,
+    48px,
+    400,
+    55px,
+    0.06em,
+    $accent-color
+  );
+  text-transform: uppercase;
+}
+.soc-media {
+  margin-bottom: 40px;
+  @include centeredFlex(flex, $justity: flex-end);
+}
+.soc-media__item {
+  &:not(:first-child) {
+    margin-left: 29px;
+  }
+  width: 32px;
+  height: 32px;
+}
+.soc-media__link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fea5bb;
+  @include centeredFlex(flex);
+  color: $primary-text-color;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+.soc-media__icon {
+  fill: currentColor;
+}
+.page-footer__contacts {
+  margin-bottom: 40px;
+  @include fontRegular(
+    $familyDmSans,
+    12px,
+    700,
+    22px,
+    $secondary-text-color,
+    right
+  );
+  letter-spacing: 0.02em;
+}
+.page-footer__number {
+  color: $accent-color;
+}
+.page-footer__copyrights {
+  padding-top: 16px;
+  border-top: 1px solid $contacts-line-color;
+  @include fontRegular(
+    $familyDmSans,
+    14px,
+    700,
+    21px,
+    $description-text-color,
+    center
+  );
+}
