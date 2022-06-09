@@ -1,5 +1,5 @@
 <section class="hero">
-  <div class="container wrapp-hero">
+  <div class="wrapp-hero">
     <div class="hero-text">
       <h1 class="hero-text__title">
         ice cream made with <span class="hero-text--accent">passion</span>
@@ -17,11 +17,15 @@
     </div>
 
     <div class="crema-pic">
-      <img src="./images/tel/tel-ice-cream_hero.png" alt="ice-cream" />
-    </div>
-
-    <div class="circle-pic">
-      <!-- <img src="" alt="circle" /> -->
+      <picture>
+        <source
+          srcset="
+            ./images/tel/tel-ice-cream_hero.png    1x,
+            ./images/tel/tel-ice-cream_hero@2x.png 2x
+          "
+        />
+        <img src="./images/tel/tel-ice-cream_hero.png" alt="ice-cream" />
+      </picture>
     </div>
 
     <div class="milk-pic">

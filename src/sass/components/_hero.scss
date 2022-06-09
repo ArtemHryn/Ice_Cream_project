@@ -2,14 +2,32 @@
   position: relative;
   height: 502px;
   background-color: $hero-bck;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 346px;
+    height: 344px;
+    background-color: $hero-ice-cream-bck;
+    position: absolute;
+    top: 15%;
+    left: 64%;
+    z-index: 1;
+    border-radius: 50%;
+
+    transform: translateX(-50%);
+  }
 }
 
 .hero-text {
   position: absolute;
+  left: 20px;
+  bottom: 158px;
+  z-index: 10;
   width: 218px;
   max-width: 100%;
-  padding-top: 194px;
-  z-index: 10;
+
   text-transform: uppercase;
 
   &__title {
@@ -32,11 +50,21 @@
 .crema-pic {
   position: absolute;
   bottom: 0;
-  right: 12px;
+  right: 35%;
+  z-index: 5;
+  transform: translateX(50%);
 }
 
 .circle-pic {
-  display: none;
+  position: absolute;
+  top: 17%;
+  left: 64%;
+  z-index: 1;
+
+  width: 346px;
+  height: 344px;
+
+  transform: translateX(-50%);
 }
 .milk-pic {
   display: none;
