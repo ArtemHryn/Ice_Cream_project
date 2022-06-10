@@ -2,6 +2,11 @@
     padding-top: 80px;
     padding-bottom: 40px;
     align-items: center;
+
+    @media screen and (min-width: $min-tablet-size) {
+        padding-bottom: 60px;
+        padding-top: 40px;
+    }
 }
 
 .products__label {
@@ -13,6 +18,12 @@
     text-align: center;
     text-transform: uppercase;
     color: $hero-ice-cream-bck;
+
+    @media screen and (min-width: $min-tablet-size) {
+        font-size: 26px;
+        line-height: 1.15;
+        margin-bottom: 18px;
+    }
 }
 
 .products__title {
@@ -26,11 +37,20 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $accent-color;
+
+    @media screen and (min-width: $min-tablet-size) {
+       font-size: 48px;
+       margin-bottom: 154px;
+    }
 }
 
 .products__list {
     @include centeredFlex(flex);
     flex-direction: column;
+
+    @media screen and (min-width: $min-tablet-size) {
+       flex-direction: row;
+    }
 }
 
 .products__item {
@@ -43,6 +63,16 @@
 
     &:not(:last-child) {
         margin-bottom: 140px;
+
+       @media screen and (min-width: $min-tablet-size) {
+       margin-right: 16px;
+       margin-bottom: 0;
+      } 
+    }
+
+    @media screen and (min-width: $min-tablet-size) {
+       width: 224px;
+       margin-bottom: 0;
     }
 }
 
@@ -60,6 +90,11 @@
          background-size: cover;
          background-position: center;
          transform: translateY(-50%);
+
+         @media screen and (min-width: $min-tablet-size) {
+            width: 224px;
+            height: 224px;
+        }
       }
   }
 
@@ -86,6 +121,11 @@
          background-size: cover;
          background-position: center;
          transform: translateY(-50%);
+
+         @media screen and (min-width: $min-tablet-size) {
+            width: 224px;
+            height: 224px;
+        }
       }
   }
 
@@ -112,6 +152,11 @@
         background-size: cover;
         background-position: center;
         transform: translateY(-50%);
+
+        @media screen and (min-width: $min-tablet-size) {
+            width: 224px;
+            height: 224px;
+        }
     }
   }
 
@@ -167,6 +212,10 @@
     text-align: center;
     letter-spacing: 0.04em;
     color: $primary-text-color;
+
+    @media screen and (min-width: $min-tablet-size) {
+           line-height: 176%;
+        }
 }
 
 .products__btn--open {
