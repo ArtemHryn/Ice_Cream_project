@@ -82,6 +82,7 @@
   background-color: $soc-media-bck;
   @include centeredFlex;
   color: $primary-text-color;
+  transition: background-color 250ms $footer-animation;
   &:hover,
   &:focus {
     background-color: $accent-color;
@@ -110,6 +111,14 @@
 }
 .page-footer__number {
   color: $accent-color;
+  outline: none;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  &:hover,
+  &:focus {
+    box-shadow: inset 160px 0 0 0 $accent-color;
+    border-radius: 2px;
+    color: $primary-text-color;
+  }
 }
 .page-footer__copyrights {
   padding-top: 16px;
