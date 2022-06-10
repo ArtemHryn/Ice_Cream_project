@@ -8,9 +8,20 @@
     justify-content: space-between;
     margin-bottom: 48px;
   }
+  @include desktop {
+    margin-bottom: 60px;
+  }
 }
 .page-footer__text-thumb {
   margin-bottom: 40px;
+  max-width: 234px;
+  @include tablet {
+    margin-bottom: 0;
+    max-width: 340px;
+  }
+  @include desktop {
+    max-width: inherit;
+  }
 }
 .page-footer__text {
   margin-bottom: 16px;
@@ -27,6 +38,10 @@
     margin-bottom: 12px;
     @include fontTitanOne(null, 26px, null, 30px, null, null);
   }
+  @include desktop {
+    margin-bottom: 16px;
+    @include fontTitanOne(null, 30px, null, 34px, null, null);
+  }
 }
 .page-footer__title {
   text-transform: uppercase;
@@ -41,10 +56,13 @@
   @include tablet {
     @include fontTitanOne(null, 48px, null, 55px, null, null);
   }
+  @include desktop {
+    @include fontTitanOne(null, 58px, null, 66px, null, null);
+  }
 }
 .soc-media {
   margin-bottom: 40px;
-  @include centeredFlex(flex, $justity: flex-end);
+  @include centeredFlex($justity: flex-end);
 }
 .soc-media__item {
   &:not(:first-child) {
@@ -62,7 +80,7 @@
   height: 100%;
   border-radius: 50%;
   background-color: $soc-media-bck;
-  @include centeredFlex(flex);
+  @include centeredFlex;
   color: $primary-text-color;
   &:hover,
   &:focus {
@@ -86,6 +104,9 @@
   @include tablet {
     @include fontRegular(null, 14px, null, 26px, null, null);
   }
+  @include desktop {
+    @include fontRegular(null, 16px, null, 30px, null, null);
+  }
 }
 .page-footer__number {
   color: $accent-color;
@@ -94,6 +115,7 @@
   padding-top: 16px;
   padding-bottom: 20px;
   border-top: 1px solid $contacts-line-color;
+  letter-spacing: 0.02em;
   @include fontRegular(
     $familyDmSans,
     14px,
@@ -103,7 +125,10 @@
     center
   );
   @include tablet {
+    padding-bottom: 8px;
     @include fontRegular(null, 14px, null, 26px, null, null);
-    letter-spacing: 0.02em;
+  }
+  @include desktop {
+    padding-top: 8px;
   }
 }
