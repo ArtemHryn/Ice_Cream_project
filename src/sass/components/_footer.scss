@@ -110,6 +110,10 @@
 }
 .page-footer__number {
   color: $accent-color;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 .page-footer__copyrights {
   padding-top: 16px;
