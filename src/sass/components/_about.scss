@@ -1,5 +1,15 @@
 .about {
-background-color: #FFF5F6;
+background-color: $about-bck;
+/* background-image: url('../images/tel/tel-bck-milk.png');
+background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: 535px; 
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/tel/tel-bck-milk@2x.png');
+  } */
 }
 
 .about__container {
@@ -15,19 +25,23 @@ max-width: 320px;
 
 
 .about_pre-title {
-  font-family: 'Titan One';
+  @include fontTitanOne($familyTitanOne, 18px, 400, 21px, 0.04em, $hero-ice-cream-bck, center);
+  margin-bottom: 15px;
+/*   font-family: 'Titan One';
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
 
   font-size: 18px;
   line-height: 1.17;
-  color: #ffa5ba;
-  margin-bottom: 15px;
+  color: #ffa5ba; */
+  
 }
 
 .about__title {
-  font-family: 'Titan One';
+  @include fontTitanOne($familyTitanOne, 34px, 400, 39px, 0.04em, $accent-color, center);
+  margin-bottom: 32px;
+  /* font-family: 'Titan One';
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
@@ -35,37 +49,38 @@ max-width: 320px;
   font-size: 34px;
   line-height: 1.15;
   letter-spacing: 0.04em;
-  color: #d41443;
-  margin-bottom: 32px;
+  color: $accent-color; */
+ 
 }
 
 .about_pic {
-  display: block;
+
   text-align: center;
   margin-bottom: 40px;
 }
 .about__text-wrap {
-  background-image: url('../images/tel/tel-bck-milk.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url('../images/tel/tel-bck-milk@2x.png');
-  }
+  max-width: 220px;  
+  position: relative;
 }
 
 .about__text {
-  font-weight: 500;
+  @include fontRegular(DM Sans, 12px, 500, 19px, $description-text-color); 
+ /*  font-weight: 500;
   font-size: 12px;
   line-height: 1.62;
-  color: #907e82;
-  margin-bottom: 20px;
+  color: $description-text-color;*/
+  margin-bottom: 20px; 
 }
 
 .about__text-dark {
-  color: #000000;
+  color: $secondary-text-color;
+}
+
+.about_milk {
+position: absolute;
+width: 320px;
+left: -20px;
+top:70px;
 }
 
 .about__btn {
