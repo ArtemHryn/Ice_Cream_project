@@ -1,11 +1,6 @@
 .customer-reviews {
   padding-top: 80px;
   padding-bottom: 48px;
-  margin: auto;
-}
-.wrapper {
-  @include centeredFlex();
-  width: 89vw;
 }
 
 /* Слайдер */
@@ -30,7 +25,7 @@
 .slick-dots li {
   overflow: hidden;
   list-style: none;
-  margin: 0px 10px;
+  margin: 0 10px;
 }
 .slick-dots button {
   width: 12px;
@@ -53,6 +48,7 @@
 
 .slider__item {
   text-align: center;
+  margin: auto;
 }
 
 .customer-reviews__photo {
@@ -61,18 +57,28 @@
 
 .customer-reviews__desc-wrapper {
   @include centeredFlex();
+  position: relative;
+  width: 280px;
   padding: 43px 65px 17px 58px;
-  width: 100vw;
+  margin-bottom: 16px;
   background-color: $customer_reviews_background;
+  z-index: -2;
+  @media screen and (min-width: $min-tablet-size) {
+    padding: 37px 53px 34px;
+    width: 620px;
+  }
+  @media screen and (min-width: $min-desktop-size) {
+    padding: 32px 105px;
+    width: 1034px;
+  }
 }
 
 .customer-reviews__description {
   @include fontRegular(null, 12px, 500, 31px, $secondary-text-color, center);
-  @include centeredFlex();
+  letter-spacing: 0.04em;
   position: relative;
-  width: 50vw;
-
-  margin-bottom: 16px;
+  width: 154px;
+  z-index: 30;
   background-image: repeating-linear-gradient(
     to bottom,
     transparent,
@@ -80,20 +86,33 @@
     $contacts-line-color 30px,
     $contacts-line-color 31px
   );
-  // &::before {
-  //   position: absolute;
-  //   content: '';
-  //   top: 10vw;
-  //   left: 4vw;
-  //   display: inline-block;
-  //   width: 54px;
-  //   height: 40px;
-  //   background-image: url("../images/quotes.svg");
-  //   background-position: center;
-  //   background-repeat: no-repeat;
-  //   background-size: cover;
-  // }
   @media screen and (min-width: $min-tablet-size) {
+    @include fontRegular(null, 14px, 500, 30px, $secondary-text-color, center);
+    width: 514px;
+  }
+  @media screen and (min-width: $min-desktop-size) {
+    @include fontRegular(null, 16px, 500, 30px, $secondary-text-color, center);
+    width: 822px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 54px;
+    height: 40px;
+    background-image: url('../images/quotes.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    @media screen and (min-width: $min-tablet-size) {
+      top: 20px;
+      left: 6px;
+    }
+    @media screen and (min-width: $min-desktop-size) {
+      top: 32px;
+      left: 105px;
+    }
   }
 }
 

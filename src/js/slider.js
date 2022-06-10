@@ -12,13 +12,5 @@ $(document).ready(function () {
     pauseOnFocus: true,
     pauseOnHover: true,
     variableWidth: true,
-    responsive: [
-      {
-        breakpoint: 400,
-        settings: {
-          variableWidth: true,
-        },
-      },
-    ],
   });
 });
