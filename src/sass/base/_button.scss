@@ -1,4 +1,4 @@
-// hero button
+// hero button links (not <button>)
 .button {
   @include centeredFlex(inline-flex);
   height: 24px;
@@ -8,11 +8,9 @@
   padding-top: 0;
   @include fontRegular(null, 8px, null, 10px, #ffffff, null);
 
-  border-style: none;
   border-radius: 20px;
 
   background-color: $heroButtonDarkPink;
-  cursor: pointer;
 
   &--white {
     margin-left: 8px;
