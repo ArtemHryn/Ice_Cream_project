@@ -1,6 +1,5 @@
 .page-footer {
   background-color: $footer-bck;
-  padding-bottom: 20px;
 }
 .page-footer__content {
   margin-bottom: 40px;
@@ -93,6 +92,7 @@
 }
 .page-footer__copyrights {
   padding-top: 16px;
+  padding-bottom: 20px;
   border-top: 1px solid $contacts-line-color;
   @include fontRegular(
     $familyDmSans,
