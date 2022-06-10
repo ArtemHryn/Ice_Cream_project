@@ -1,9 +1,19 @@
 .hero {
-  position: relative;
+  width: 100%;
   height: 502px;
+  max-width: 1280px;
+  margin: 0 auto;
+
   background-color: $hero-bck;
+  position: relative;
   overflow: hidden;
 
+  @media screen and (min-width: 767.98px) {
+    height: 415px;
+  }
+}
+
+.wrapp-hero {
   &::after {
     content: '';
     display: block;
@@ -43,6 +53,14 @@
 
   &--accent {
     @include fontTitanOne(null, 48px, null, 46px, null, $accent-color, null);
+    @media screen and (min-width: 767.98px) {
+      font-size: 34px;
+    }
+  }
+
+  @media screen and (min-width: 767.98px) {
+    font-size: 22px;
+    top: 101px;
   }
 }
 
@@ -65,11 +83,24 @@
 
   transform: translateX(-50%);
 }
+
 .milk-pic {
   display: none;
+  max-height: 154px;
+
+  @media screen and (min-width: 767.98px) {
+    display: flex;
+    position: absolute;
+  }
 }
 .milk-info {
-  display: none;
+  display: flex;
+  &__text {
+    @include centeredFlex(flex);
+    width: 114px;
+    @include fontRegular($familyDmSans, 8px, 400, 12px, $primary-text-color);
+    text-transform: none;
+  }
 }
 .block-amount {
   display: none;

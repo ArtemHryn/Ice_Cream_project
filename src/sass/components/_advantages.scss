@@ -20,3 +20,35 @@
 .advantages-list__item:not(:last-child) {
     margin-bottom: 32px;
 }
+
+/*....advantages icons....*/
+.advantages-list__content::before {
+    content: "";
+    display: inline-block;
+    margin-bottom: 16px;
+    background-size: contain;
+}
+.advantages-list__content--one::before {
+    width: 33px;
+    height: 50px;
+    background-image: url(../images/icons/icon1.png); 
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+            background-image: url(../images/icons/icon1@2x.png);
+        }
+    }
+.advantages-list__content--two::before {
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/icons/icon2.png); 
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(../images/icons/icon2@2x.png);
+    }
+}
+.advantages-list__content--three::before {
+    width: 44px;
+    height: 50px;
+    background-image: url(../images/icons/icon3.png); 
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(../images/icons/icon3@2x.png);
+    }
+}
