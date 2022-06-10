@@ -25,7 +25,6 @@
     left: 64%;
     z-index: 1;
     border-radius: 50%;
-
     transform: translateX(-50%);
   }
 }
@@ -52,7 +51,7 @@
   }
 
   &--accent {
-    @include fontTitanOne(null, 48px, null, 46px, null, $accent-color, null);
+    @include fontTitanOne(null, 48px, 400, 46px, null, $accent-color, null);
     @media screen and (min-width: 767.98px) {
       font-size: 34px;
     }
