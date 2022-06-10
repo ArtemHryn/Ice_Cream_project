@@ -1,12 +1,12 @@
 .contacts {
 padding-left: 20px;
 padding-right: 20px;
+padding-bottom: 48px;
 margin-left: auto;
 margin-right: auto;
 
-background: $about-bck;
-
-}
+background: rgb(255,245,246);
+background: linear-gradient(0deg, rgba(255,245,246,1) 73%, rgba(255,255,255,1) 90%);}
 
 .contacts-card {
     margin: 0 auto;
@@ -95,7 +95,7 @@ background: $about-bck;
 }
 
 .contacts-card__time {
-    color: #FFA5BA;
+    color: $hero-ice-cream-bck;
 
     font-family: $familyDmSans;
 
@@ -106,22 +106,35 @@ background: $about-bck;
 }
 
 .contact-adress__list {
+    &:first-child {
+        margin-bottom: 8px;
+    }
     font-family: $familyDmSans;
 
 }
 
 .contact-adress__link {
+
     text-decoration: none;
     color: $description-text-color;
 
     font-family: $familyDmSans;
 
+        &--padding-top {
+            text-decoration: none;
+            padding-top: 20px;
+            color: $description-text-color;
+        }
+
+        &--padding-bottom {
+            padding-bottom: 20px;
+            color: $description-text-color; 
+        }
 }
 
 .contacts-button-list {
     text-align: center;
-    // margin-bottom: 48px;
-
+    
     &:not(:last-child) {
         margin-bottom: 10px;
     }
@@ -129,22 +142,44 @@ background: $about-bck;
 
 
 .contacts-button__item {
-
+    &:first-child {
+        margin-bottom: 10px;
+    }
 }
 
 .contacts-button {
-    
 
     &--red {
-        
-        color: #FFFFFF;
-        background: #D41342;
+        padding: 12px 17px 12px 17px;
+
+        color: $primary-text-color;
+        background: $hover-bck;
         border-radius: 22px;
+        
     }
     &--white {
-        color: #D41443;
-        background: #FFFFFF;
+        padding: 12px 17px 12px 17px;
+
+        color: $accent-color;
+        background: $primary-text-color;
         border-radius: 22px;
     }
+
+    &--red:hover,&--red:focus {
+        background: #D41342;
+    }
+
+    &--white:hover,&--white:focus {
+        background: #ECEBEB;
+    }
+
+    &__icon--red {
+        margin-left: 8px;
+    }
+
+    &__icon--white {
+        margin-left: 8px;
+    }
+
 }
 
