@@ -28,6 +28,7 @@
   transition-duration: $td;
   transition-timing-function: $ttf;
 }
+
 @mixin mobile {
   @media screen and (min-width: 320px) {
     @content;
