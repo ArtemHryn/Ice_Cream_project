@@ -6,7 +6,7 @@ margin-left: auto;
 margin-right: auto;
 
 background: rgb(255,245,246);
-background: linear-gradient(0deg, rgba(255,245,246,1) 73%, rgba(255,255,255,1) 90%);}
+background: linear-gradient(0deg, rgba(255,245,246,1) 70%, rgba(255,255,255,1) 99%);}
 
 .contacts-card {
     margin: 0 auto;
@@ -50,11 +50,14 @@ background: linear-gradient(0deg, rgba(255,245,246,1) 73%, rgba(255,255,255,1) 9
     height: 16px;
     margin-bottom: 20px;
 
-    color: $primary-text-color;
     border-radius: 4px;
 
-    text-align: center;
-    font-family: $familyDmSans;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.04em;
+
+    @include fontRegular($familyDmSans, 12px, 500, 22px, $primary-text-color, $ta: center);
 }
 
 
@@ -66,19 +69,19 @@ background: linear-gradient(0deg, rgba(255,245,246,1) 73%, rgba(255,255,255,1) 9
 
 .contacts-card__name {
     margin-bottom: 8px;
-    color: $secondary-text-color;
 
-    font-family: $familyDmSans;
+    font-style: normal;
+    letter-spacing: 0.04em;
 
-
+    @include fontRegular($familyDmSans, 12px, 500, 22px, $secondary-text-color, null);
 }
 
 .contacts-card__text {
     padding-bottom: 24px;
-    color: $description-text-color;
 
-    font-family: $familyDmSans;
 
+
+    @include fontRegular($familyDmSans, 12px, 500, 18px, $description-text-color, null);
 }
 
 
@@ -95,10 +98,8 @@ background: linear-gradient(0deg, rgba(255,245,246,1) 73%, rgba(255,255,255,1) 9
 }
 
 .contacts-card__time {
-    color: $hero-ice-cream-bck;
 
-    font-family: $familyDmSans;
-
+    @include fontRegular($familyDmSans, 12px, 500, 22px, $hero-ice-cream-bck, null);
 }
 
 .contact-adress {
@@ -106,22 +107,18 @@ background: linear-gradient(0deg, rgba(255,245,246,1) 73%, rgba(255,255,255,1) 9
 }
 
 .contact-adress__list {
+    @include fontRegular($familyDmSans, 12px, 500, 18px, $description-text-color, null);
+
     &:first-child {
         margin-bottom: 8px;
     }
-    font-family: $familyDmSans;
 
 }
 
 .contact-adress__link {
-
     text-decoration: none;
-    color: $description-text-color;
-
-    font-family: $familyDmSans;
-
+        
         &--padding-top {
-            text-decoration: none;
             padding-top: 20px;
             color: $description-text-color;
         }
@@ -152,25 +149,32 @@ background: linear-gradient(0deg, rgba(255,245,246,1) 73%, rgba(255,255,255,1) 9
     &--red {
         padding: 12px 17px 12px 17px;
 
-        color: $primary-text-color;
         background: $hover-bck;
         border-radius: 22px;
-        
     }
+
     &--white {
         padding: 12px 17px 12px 17px;
 
-        color: $accent-color;
         background: $primary-text-color;
         border-radius: 22px;
     }
 
     &--red:hover,&--red:focus {
-        background: #D41342;
+        background: $hover-bck;
     }
 
     &--white:hover,&--white:focus {
-        background: #ECEBEB;
+        background: $btn-hover-bck;
+    }
+
+    &__text--red {
+        @include fontRegular($familyDmSans, 16px, 700, 21px, $primary-text-color, null);
+    }
+
+    &__text--white {
+        @include fontRegular($familyDmSans, 16px, 700, 21px, $accent-color, null); 
+
     }
 
     &__icon--red {
