@@ -5,8 +5,8 @@ padding-bottom: 48px;
 margin-left: auto;
 margin-right: auto;
 
-background: rgb(255,245,246);
-background: linear-gradient(0deg, rgba(255,245,246,1) 70%, rgba(255,255,255,1) 99%);}
+background: $footer-bck;
+background: linear-gradient(0deg, $footer-bck 70%, $primary-text-color 99%);}
 
 .contacts-card {
     margin: 0 auto;
@@ -151,6 +151,8 @@ background: linear-gradient(0deg, rgba(255,245,246,1) 70%, rgba(255,255,255,1) 9
 
         background: $hover-bck;
         border-radius: 22px;
+
+        @include fontRegular($familyDmSans, 16px, 700, 21px, $primary-text-color, null);
     }
 
     &--white {
@@ -158,23 +160,16 @@ background: linear-gradient(0deg, rgba(255,245,246,1) 70%, rgba(255,255,255,1) 9
 
         background: $primary-text-color;
         border-radius: 22px;
+
+        @include fontRegular($familyDmSans, 16px, 700, 21px, $accent-color, null);
     }
 
     &--red:hover,&--red:focus {
-        background: $hover-bck;
+        background: $heroBtnHover;
     }
 
     &--white:hover,&--white:focus {
         background: $btn-hover-bck;
-    }
-
-    &__text--red {
-        @include fontRegular($familyDmSans, 16px, 700, 21px, $primary-text-color, null);
-    }
-
-    &__text--white {
-        @include fontRegular($familyDmSans, 16px, 700, 21px, $accent-color, null); 
-
     }
 
     &__icon--red {
