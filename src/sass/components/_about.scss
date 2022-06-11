@@ -1,7 +1,8 @@
 .about {
 background-color: $about-bck;
 @media screen and (min-width:$min-desktop-size){
-position: relative;}
+position: relative;
+}
 }
 
 .about__container {
@@ -17,7 +18,11 @@ max-width: 320px;
 max-width: 100%;  
 }
 }
-
+.about__milk-img {
+  @media screen and (min-width:$min-desktop-size){
+    width: 100%;
+  }  
+}
 
 .about_pre-title {
   text-transform: uppercase;
@@ -51,7 +56,7 @@ max-width: 100%;
      display: flex;
    }
  }
-.about_pic {
+.about__cow-pic {
   text-align: center;
   margin-bottom: 40px;
   @media screen and (min-width:$min-tablet-size) {
@@ -96,7 +101,7 @@ max-width: 100%;
   }
 }
 
-.about_milk {
+.about__milk {
 position: absolute;
 width: 320px;
 left: -20px;
@@ -108,10 +113,10 @@ top:70px;
 @media screen and (min-width:1280px){
 display: block;
 position: absolute; 
-width: 1200px;
+width: 100%;
 left: 0;
-top:245px;
-
+top:180px;
+z-index: -1;
 }
 }
 
@@ -121,18 +126,26 @@ top:245px;
   justify-content: center;
   width: 176px;
   height: 44px;
-  background: #ffffff;
+  background: $heroButtonWhite;
   border-radius: 22px;
   font-family: inherit;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.29;
-  color: #d41443;
+  color: $accent-color;
   @media screen and (min-width:$min-tablet-size){
     font-size: 16px;
     line-height: 1.3;
   }
-}
+  &:hover,
+  &:focus
+  {
+    background-color: $accent-color;
+    color: $heroButtonWhite;
+    // background-color: $btn-hover-bck;
+  }
+  }
+
 
 .about__icon-arrow {
   display: inline-block;
