@@ -1,22 +1,18 @@
 <!-- section hero -->
 <section class="hero">
-  <div class="wrapp-hero container">
+  <div class="container">
     <!-- hero title -->
     <div class="hero-text">
       <h1 class="hero-text__title">
         ice cream made with <span class="hero-text--accent">passion</span>
       </h1>
-      <div>
-        <a href="#products" class="button button--right-margin">Products</a>
-        <a href="#how_its_made" class="button button--white">
-          How it’s made?
-        </a>
-      </div>
+      <a href="#products" class="button button--right-margin">Products</a>
+      <a href="#how_its_made" class="button button--white"> How it’s made? </a>
     </div>
 
     <!--  milk with text-content -->
-    <div class="hero-milk-block">
-      <div>
+    <ul class="hero-milk-list">
+      <li>
         <picture>
           <source
             srcset="
@@ -31,22 +27,23 @@
             alt="eco-milk"
           />
         </picture>
-      </div>
-      <div class="hero-milk-info">
+      </li>
+      <li>
         <p class="hero-milk-info__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et
         </p>
         <button class="button-arrow button-arrow--hero" type="button">
-          <svg width="6" height="6">
+          <svg class="button-arrow__hero-svg">
             <use href="./images/sprite/sprite.svg#icon-arrow-right"></use>
           </svg>
         </button>
-      </div>
-    </div>
+      </li>
+    </ul>
 
     <!-- ice-cream picture -->
     <div class="crema-pic">
+      <!-- mobile -->
       <picture>
         <source
           srcset="
@@ -55,14 +52,29 @@
           "
           media="(max-width:767px)"
         />
+        <!-- tablet -->
+        <source
+          srcset="
+            ./images/tablet/tablet-ice-cream_hero.png    1x,
+            ./images/tablet/tablet-ice-cream_hero@2x.png 2x
+          "
+          media="(min-width:767px)"
+        />
         <img src="./images/tel/tel-ice-cream_hero.png" alt="ice-cream" />
       </picture>
     </div>
 
-    <div class="block-amount">
-      <p class="block-amount__subtitle">16</p>
-      <p class="block-amount__subtitle">23</p>
-    </div>
+    <!-- amount block -->
+    <ul class="amount-list">
+      <li class="amount-list__item">
+        <p class="amount-list__number">16</p>
+        <p class="amount-list__subtitle">cafes</p>
+      </li>
+      <li class="amount-list__item">
+        <p class="amount-list__number">23</p>
+        <p class="amount-list__subtitle">food trucks</p>
+      </li>
+    </ul>
 
     <div class="cta-img">
       <!-- <img src="" alt="tasty ice-cream" /> -->
