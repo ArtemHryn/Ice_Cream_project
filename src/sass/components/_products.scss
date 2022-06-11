@@ -130,24 +130,44 @@
             width: 224px;
             height: 224px;
             transform: translateY(-65%);
-        }
+         
+            // @media (min-device-pixel-ratio: 2),
+            //      (-webkit-min-device-pixel-ratio: 2),
+            //      (min-resolution: 192dpi),
+            //      (min-resolution: 2dppx) {
+            //      background-image: url('../images/tel/tel-pink-cream@2x.png');
+            //      display: block;
+            //      position: absolute;
+            //      left: 0;
+            //      top: 0;
+            //      width: 224px;
+            //      height: 224px;
+            //      transform: translateY(-65%);
+            //   }
+          }
 
         @media screen and (min-width: $min-desktop-size) {
             width: 394px;
             height: 394px;
             transform: translateY(-67%);
+            background-image: url('../images/tel/tel-pink-cream@2x.png');
+            
+            // @media (min-device-pixel-ratio: 2),
+            //      (-webkit-min-device-pixel-ratio: 2),
+            //      (min-resolution: 192dpi),
+            //      (min-resolution: 2dppx) {
+            //      background-image: url('../images/tel/tel-pink-cream@2x.png');
+            //      display: block;
+            //      position: absolute;
+            //      left: 0;
+            //      top: 0;
+            //      width: 394px;
+            //      height: 394px;
+            //      transform: translateY(-67%);
+            //   }
+          }
         }
-      }
   }
-
-  @media (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .products__item--ice-cream::before {
-    background-image: url('../images/tel/tel-pink-cream@2x.png');
-  }
-}
 
 .products__item--ice-coffee {
     background-color: $products-coffee-bck;
@@ -174,17 +194,16 @@
             width: 394px;
             height: 394px;
             transform: translateY(-67%);
+            background-image: url('../images/tel/tel-cofee@2x.png');
         }
-      }
-  }
 
-@media (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .products__item--ice-coffee::before {
-    background-image: url('../images/tel/tel-cofee@2x.png');
-  }
+        // @media (min-device-pixel-ratio: 2),
+        //        (-webkit-min-device-pixel-ratio: 2),
+        //        (min-resolution: 192dpi),
+        //        (min-resolution: 2dppx) {
+        //   background-image: url('../images/tel/tel-cofee@2x.png');
+        // }
+      }
 }
 
 .products__item--milkshakes {
@@ -212,17 +231,16 @@
             width: 394px;
             height: 394px;
             transform: translateY(-67%);
+            background-image: url('../images/tel/tel-milkshake@2x.png');
         }
-    }
-  }
 
-@media (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .products__item--milkshake::before {
-    background-image: url('../images/tel/tel-milkshake@2x.png');
-  }
+        @media (min-device-pixel-ratio: 2),
+               (-webkit-min-device-pixel-ratio: 2),
+               (min-resolution: 192dpi),
+               (min-resolution: 2dppx) {
+               background-image: url('../images/tel/tel-milkshake@2x.png');
+            }
+    }
 }
 
 .products__name {
@@ -299,11 +317,11 @@
 
     &:hover .products__btn-icon,
     &:focus .products__btn-icon {
-        transform: scale(1.5) rotate(90deg);
+        transform: scale(1.3);
     }
 
     @media screen and (min-width: $min-desktop-size) {
-           margin-bottom: 60px;
+          margin-bottom: 60px;
         }
 }
 
@@ -317,3 +335,6 @@
     fill: $accent-color;
 }
 
+.rotate-button {
+  transform: rotate(90deg);
+}
