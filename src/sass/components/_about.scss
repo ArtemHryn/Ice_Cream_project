@@ -1,6 +1,7 @@
 .about {
 background-color: $about-bck;
-
+@media screen and (min-width:$min-desktop-size){
+position: relative;}
 }
 
 .about__container {
@@ -22,12 +23,27 @@ max-width: 100%;
   text-transform: uppercase;
   @include fontTitanOne($familyTitanOne, 18px, 400, 21px, 0.04em, $hero-ice-cream-bck, center);
   margin-bottom: 15px;
+  @media screen and (min-width:$min-tablet-size){
+  @include fontTitanOne($familyTitanOne, 26px, 400, 30px, 0.04em, $hero-ice-cream-bck, center); 
+  margin-bottom: 16px;
+  }
+  @media screen and (min-width:$min-desktop-size){
+  @include fontTitanOne($familyTitanOne, 30px, 400, 34px, 0.04em, $hero-ice-cream-bck, center); 
+  }
 }
 
 .about__title {
   text-transform: uppercase;
   @include fontTitanOne($familyTitanOne, 34px, 400, 39px, 0.04em, $accent-color, center);
   margin-bottom: 32px;
+  @media screen and (min-width:$min-tablet-size){
+    @include fontTitanOne($familyTitanOne, 48px, 400, 55px, 0.04em, $accent-color, center);
+  margin-bottom: 40px;
+  }
+  @media screen and (min-width:$min-desktop-size){
+    @include fontTitanOne($familyTitanOne, 58px, 400, 66px, 0.06em, $accent-color, center);
+    margin-bottom: 79px;
+  }
  }
 
  .about__tablet-wrap {
@@ -42,6 +58,9 @@ max-width: 100%;
   width: 336px;  
   margin-bottom: 0;
   }
+  @media screen and (min-width:$min-desktop-size){
+  width: 501px;   
+  }
 }
 .about__text-wrap {
   max-width: 220px;  
@@ -49,6 +68,12 @@ max-width: 100%;
   @media screen and (min-width:$min-tablet-size) {
   max-width: 334px;  
   margin-left: 32px;
+  }
+  @media screen and (min-width:$min-desktop-size){
+    max-width: 463px;  
+    margin-left: 139px;
+    position: static;
+    z-index: 10;
   }
 }
 
@@ -59,7 +84,8 @@ max-width: 100%;
   @include fontRegular(DM Sans, 14px, 500, 25px, $description-text-color);  
   }
   @media screen and (min-width:$min-desktop-size){
-    @include fontRegular(DM Sans, 14px, 500, 27px, $description-text-color);   
+    @include fontRegular(DM Sans, 14px, 500, 27px, $description-text-color);
+    margin-bottom: 32px;    
   }
 }
 
@@ -80,11 +106,12 @@ top:70px;
  }
 
 @media screen and (min-width:1280px){
-
+display: block;
 position: absolute; 
 width: 1200px;
-left: -20px;
-top:70px;
+left: 0;
+top:245px;
+
 }
 }
 
@@ -101,6 +128,10 @@ top:70px;
   font-size: 14px;
   line-height: 1.29;
   color: #d41443;
+  @media screen and (min-width:$min-tablet-size){
+    font-size: 16px;
+    line-height: 1.3;
+  }
 }
 
 .about__icon-arrow {

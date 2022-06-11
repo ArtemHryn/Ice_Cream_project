@@ -1,12 +1,12 @@
 .contacts {
 padding-left: 20px;
 padding-right: 20px;
+padding-bottom: 48px;
 margin-left: auto;
 margin-right: auto;
 
-background: $about-bck;
-
-}
+background: $footer-bck;
+background: linear-gradient(0deg, $footer-bck 70%, $primary-text-color 99%);}
 
 .contacts-card {
     margin: 0 auto;
@@ -50,11 +50,14 @@ background: $about-bck;
     height: 16px;
     margin-bottom: 20px;
 
-    color: $primary-text-color;
     border-radius: 4px;
 
-    text-align: center;
-    font-family: $familyDmSans;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.04em;
+
+    @include fontRegular($familyDmSans, 12px, 500, 22px, $primary-text-color, $ta: center);
 }
 
 
@@ -66,19 +69,19 @@ background: $about-bck;
 
 .contacts-card__name {
     margin-bottom: 8px;
-    color: $secondary-text-color;
 
-    font-family: $familyDmSans;
+    font-style: normal;
+    letter-spacing: 0.04em;
 
-
+    @include fontRegular($familyDmSans, 12px, 500, 22px, $secondary-text-color, null);
 }
 
 .contacts-card__text {
     padding-bottom: 24px;
-    color: $description-text-color;
 
-    font-family: $familyDmSans;
 
+
+    @include fontRegular($familyDmSans, 12px, 500, 18px, $description-text-color, null);
 }
 
 
@@ -95,10 +98,8 @@ background: $about-bck;
 }
 
 .contacts-card__time {
-    color: #FFA5BA;
 
-    font-family: $familyDmSans;
-
+    @include fontRegular($familyDmSans, 12px, 500, 22px, $hero-ice-cream-bck, null);
 }
 
 .contact-adress {
@@ -106,22 +107,31 @@ background: $about-bck;
 }
 
 .contact-adress__list {
-    font-family: $familyDmSans;
+    @include fontRegular($familyDmSans, 12px, 500, 18px, $description-text-color, null);
+
+    &:first-child {
+        margin-bottom: 8px;
+    }
 
 }
 
 .contact-adress__link {
     text-decoration: none;
-    color: $description-text-color;
+        
+        &--padding-top {
+            padding-top: 20px;
+            color: $description-text-color;
+        }
 
-    font-family: $familyDmSans;
-
+        &--padding-bottom {
+            padding-bottom: 20px;
+            color: $description-text-color; 
+        }
 }
 
 .contacts-button-list {
     text-align: center;
-    // margin-bottom: 48px;
-
+    
     &:not(:last-child) {
         margin-bottom: 10px;
     }
@@ -129,22 +139,46 @@ background: $about-bck;
 
 
 .contacts-button__item {
-
+    &:first-child {
+        margin-bottom: 10px;
+    }
 }
 
 .contacts-button {
-    
 
     &--red {
-        
-        color: #FFFFFF;
-        background: #D41342;
+        padding: 12px 17px 12px 17px;
+
+        background: $hover-bck;
         border-radius: 22px;
+
+        @include fontRegular($familyDmSans, 16px, 700, 21px, $primary-text-color, null);
     }
+
     &--white {
-        color: #D41443;
-        background: #FFFFFF;
+        padding: 12px 17px 12px 17px;
+
+        background: $primary-text-color;
         border-radius: 22px;
+
+        @include fontRegular($familyDmSans, 16px, 700, 21px, $accent-color, null);
     }
+
+    &--red:hover,&--red:focus {
+        background: $heroBtnHover;
+    }
+
+    &--white:hover,&--white:focus {
+        background: $btn-hover-bck;
+    }
+
+    &__icon--red {
+        margin-left: 8px;
+    }
+
+    &__icon--white {
+        margin-left: 8px;
+    }
+
 }
 
