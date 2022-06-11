@@ -6,19 +6,42 @@
       <h1 class="hero-text__title">
         ice cream made with <span class="hero-text--accent">passion</span>
       </h1>
-      <a href="#products" class="button button--right-margin">Products</a>
-      <a href="#how_its_made" class="button button--white"> How it’s made? </a>
+      <div>
+        <a href="#products" class="button button--right-margin">Products</a>
+        <a href="#how_its_made" class="button button--white">
+          How it’s made?
+        </a>
+      </div>
+    </div>
 
-      <!--  milk with text-content -->
-      <div class="milk-pic">
-        <img src="./images/tablet/tablet-milk.png" alt="eco-milk" />
-        <div class="milk-info">
-          <p class="milk-info__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et
-          </p>
-          <button type="button"></button>
-        </div>
+    <!--  milk with text-content -->
+    <div class="hero-milk-block">
+      <div>
+        <picture>
+          <source
+            srcset="
+              ./images/tablet/tablet-milk.png    1x,
+              ./images/tablet/tablet-milk@2x.png 2x
+            "
+            media="(min-width:767px)"
+          />
+          <img
+            src="./images/tablet/tablet-milk.png"
+            width="152"
+            alt="eco-milk"
+          />
+        </picture>
+      </div>
+      <div class="hero-milk-info">
+        <p class="hero-milk-info__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et
+        </p>
+        <button class="button-arrow button-arrow--hero" type="button">
+          <svg width="6" height="6">
+            <use href="./images/sprite/sprite.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
       </div>
     </div>
 
@@ -30,6 +53,7 @@
             ./images/tel/tel-ice-cream_hero.png    1x,
             ./images/tel/tel-ice-cream_hero@2x.png 2x
           "
+          media="(max-width:767px)"
         />
         <img src="./images/tel/tel-ice-cream_hero.png" alt="ice-cream" />
       </picture>

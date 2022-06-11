@@ -9,12 +9,7 @@
   @include fontRegular(null, 8px, 400, 10px, #ffffff, null);
 
   border-radius: 20px;
-
   background-color: $heroButtonDarkPink;
-
-  &--right-margin {
-    margin-right: 8px;
-  }
 
   &--white {
     background-color: $heroButtonWhite;
@@ -30,4 +25,14 @@
   &--white:focus {
     background-color: $btn-hover-bck;
   }
+}
+
+// button with pink arrow default style
+
+.button-arrow {
+  @include centeredFlex(flex);
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  fill: $heroButtonDarkPink;
 }

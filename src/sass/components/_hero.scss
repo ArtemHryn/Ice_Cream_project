@@ -3,11 +3,10 @@
   height: 502px;
   max-width: 1280px;
   margin: 0 auto;
-
   background-color: $hero-bck;
   position: relative;
   overflow: hidden;
-
+  // tablet
   @media screen and (min-width: 767.98px) {
     height: 415px;
   }
@@ -31,13 +30,11 @@
 
 .hero-text {
   position: absolute;
-  left: 20px;
-  bottom: 158px;
-  z-index: 10;
-  width: 218px;
-  max-width: 100%;
+  top: 194px;
+  z-index: 3;
 
   &__title {
+    width: 218px;
     margin-bottom: 20px;
     text-transform: uppercase;
     @include fontTitanOne(
@@ -48,15 +45,21 @@
       0.04em,
       $primary-text-color
     );
+    // tablet
+    @media screen and (min-width: 767.98px) {
+      width: 162px;
+      font-size: 22px;
+    }
   }
 
   &--accent {
     @include fontTitanOne(null, 48px, 400, 46px, null, $accent-color, null);
+    // tablet
     @media screen and (min-width: 767.98px) {
       font-size: 34px;
     }
   }
-
+  // tablet
   @media screen and (min-width: 767.98px) {
     font-size: 22px;
     top: 101px;
@@ -67,7 +70,7 @@
   position: absolute;
   bottom: 0;
   right: 35%;
-  z-index: 5;
+  z-index: 2;
   transform: translateX(50%);
 }
 
@@ -83,24 +86,33 @@
   transform: translateX(-50%);
 }
 
-.milk-pic {
+.hero-milk-block {
   display: none;
-  max-height: 154px;
 
+  // tablet
   @media screen and (min-width: 767.98px) {
-    display: flex;
+    @include centeredFlex(flex);
     position: absolute;
+    bottom: 16px;
   }
 }
-.milk-info {
-  display: flex;
+
+.hero-milk-info {
+  display: block;
+
   &__text {
-    @include centeredFlex(flex);
     width: 114px;
+    margin-bottom: 7px;
     @include fontRegular($familyDmSans, 8px, 400, 12px, $primary-text-color);
     text-transform: none;
   }
 }
+
+.button-arrow--hero {
+  width: 18px;
+  height: 18px;
+}
+
 .block-amount {
   display: none;
 }
