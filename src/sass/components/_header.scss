@@ -2,17 +2,20 @@
   position: absolute;
   z-index: 99;
   width: 100%;
-  max-width: 100%;
 }
 
 .header-container {
-  @include centeredFlex(flex, center, space-between);
-  margin-top: 8px;
-  @media screen and (min-width: 768px) {
-    margin-top: 32px;
+  @media screen and (max-width: $max-tablet-size) {
+    max-width: 100%;
   }
-  @media screen and (min-width: 1280px) {
-    margin-top: 37px;
+
+  @include centeredFlex(flex, center, space-between);
+  padding-top: 8px;
+  @media screen and (min-width: $min-tablet-size) {
+    padding-top: 32px;
+  }
+  @media screen and (min-width: $min-desktop-size) {
+    padding-top: 37px;
   }
 }
 
@@ -30,7 +33,7 @@
   border: 0;
   background-color: transparent;
   cursor: pointer;
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $min-desktop-size) {
     display: none;
   }
 }
@@ -45,7 +48,7 @@
   border: 0;
   background-color: transparent;
   cursor: pointer;
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $min-desktop-size) {
     display: none;
   }
 }
@@ -53,16 +56,18 @@
 .menu-button__container {
   @include centeredFlex(flex, center, null);
   margin-left: auto;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $min-tablet-size) {
     margin-right: 32px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $min-desktop-size) {
     display: none;
   }
 }
 
 .buy-button {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 22px;
   background: $primary-text-color;
   border: 0;
@@ -75,36 +80,8 @@
   }
 }
 
-.buy-button__flex {
-  width: 112px;
-  display: flex;
-  margin: 0 auto;
-  justify-content: space-between;
-  align-items: baseline;
-  @media screen and(min-width: 768px) {
-    width: 99px;
-  }
-}
-
-.buy-button__flex_header {
-  width: 85px;
-}
-
-.buy-button__text {
-  display: block;
-  width: 90px;
-  @media screen and(min-width: 768px) {
-    width: 80px;
-  }
-}
-
-.buy-button__text_header {
-  width: 70px;
-}
-
 .buy-button_icon {
-  width: 8px;
-  height: 10px;
+  margin-left: 12px;
 }
 
 .buy-button__menu {
@@ -113,10 +90,10 @@
   height: 44px;
   margin-top: 60px;
   margin-bottom: 19px;
-  @media screen and(min-width: 768px) {
+  @media screen and(min-width: $min-tablet-size) {
     width: 186px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $min-desktop-size) {
     display: none;
   }
 }
@@ -124,19 +101,19 @@
 .buy-button__header {
   width: 160px;
   height: 44px;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $max-tablet-size) {
     display: none;
   }
 }
 
 .nav-list {
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $min-desktop-size) {
     display: flex;
   }
 }
 
 .nav_item {
-  @media screen and (max-width: 1279px) {
+  @media screen and (max-width: $max-desktop-size) {
     height: 42px;
     border-bottom: 1px solid $border_color;
     &:first-child {
@@ -149,8 +126,9 @@
   display: block;
   padding: 13px 20px 11px 20px;
   @include fontRegular('DM Sans', 14px, 700, 18px, $primary-text-color, null);
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $min-desktop-size) {
     padding: 15px;
+    @include fontRegular('DM Sans', 16px, 700, 21px, $primary-text-color, null);
   }
   &:hover,
   &:focus {
@@ -159,7 +137,7 @@
 }
 
 .menu-container {
-  @media screen and (max-width: 1279px) {
+  @media screen and (max-width: $max-desktop-size) {
     z-index: 21;
     position: fixed;
     top: 0;
@@ -174,7 +152,7 @@
       width: 254px;
     }
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $min-desktop-size) {
     position: relative;
     display: flex;
     flex-direction: row-reverse;
@@ -182,7 +160,7 @@
 }
 
 .menu-container.is-hidden {
-  @media screen and (max-width: 1279px) {
+  @media screen and (max-width: $max-desktop-size) {
     transform: translateX(100%);
   }
 }

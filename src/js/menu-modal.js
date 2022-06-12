@@ -5,6 +5,7 @@
     closeAnchorLink: document.querySelector('[data-anchor-close]'),
     modal: document.querySelector('[data-menu]'),
     body: document.querySelector('body'),
+    buyButton: document.querySelector('.js-buy-button')
   };
   refs.openMenuBtn.addEventListener('click', toggleModal);
   refs.closeMenuBtn.addEventListener('click', toggleModal);
@@ -12,5 +13,6 @@
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
     refs.body.classList.toggle('no-scroll');
+    refs.buyButton.classList.toggle('visually-hidden');
   }
 })();
