@@ -13,6 +13,6 @@
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
     refs.body.classList.toggle('no-scroll');
-    refs.buyButton.classList.toggle('visually-hidden');
+    refs.buyButton.classList.toggle('hide-button');
   }
 })();

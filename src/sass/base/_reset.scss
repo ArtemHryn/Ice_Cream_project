@@ -70,7 +70,17 @@ a {
 }
 
 .no-scroll {
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: $max-desktop-size) {
     overflow: hidden;
   }
+}
+
+
+.hide-button {
+  @media screen and (max-width: $max-desktop-size) {
+  opacity: 0;
+  visibility: hidden;
+
+  }
+
 }
