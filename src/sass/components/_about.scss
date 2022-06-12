@@ -1,7 +1,8 @@
 .about {
 background-color: $about-bck;
-@media screen and (min-width:$min-desktop-size){
 position: relative;
+@media screen and (min-width:$min-desktop-size){
+
 }
 }
 
@@ -13,12 +14,13 @@ padding-bottom: 40px;
 margin-left: auto;
 margin-right: auto;
 align-items: center;
-max-width: 320px;
+// max-width: 320px;
 @media screen and (min-width:$min-tablet-size){
-max-width: 100%;  
+// max-width: 100%;  
 }
 }
 .about__milk-img {
+  // width: 100vw;
   @media screen and (min-width:$min-desktop-size){
     width: 100%;
   }  
@@ -52,8 +54,13 @@ max-width: 100%;
  }
 
  .about__tablet-wrap {
-   @media screen and (min-width:768px){
+  // border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   @media screen and (min-width:$min-tablet-size){
      display: flex;
+     flex-direction: row;
    }
  }
 .about__cow-pic {
@@ -67,9 +74,10 @@ max-width: 100%;
   width: 501px;   
   }
 }
-.about__text-wrap {
+.about__text-wrsolap {
+  // border: 1px id red;
   max-width: 220px;  
-  position: relative;
+  // position: relative;
   @media screen and (min-width:$min-tablet-size) {
   max-width: 334px;  
   margin-left: 32px;
@@ -103,19 +111,21 @@ max-width: 100%;
 
 .about__milk {
 position: absolute;
-width: 320px;
-left: -20px;
-top:70px;
-@media screen and (min-width:768px) {
+width: 100vw;
+/* left: -20px;
+top:70px; */
+left: 0;
+top:500px;
+@media screen and (min-width:$min-tablet-size) {
   display: none;
  }
 
-@media screen and (min-width:1280px){
+@media screen and (min-width:$min-desktop-size){
 display: block;
 position: absolute; 
 width: 100%;
 left: 0;
-top:180px;
+top:160px;
 z-index: -1;
 }
 }
