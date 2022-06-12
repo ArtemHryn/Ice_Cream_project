@@ -2,6 +2,13 @@
   padding-bottom: 48px;
   background: $footer-bck;
   background: linear-gradient(0deg, $footer-bck 70%, $primary-text-color 100%);
+
+  @media screen and (min-width: $min-tablet-size) {
+    padding-bottom: 40px;
+  }
+  @media screen and (min-width: $min-desktop-size) {
+    padding-bottom: 120px;
+  }
 }
 
 .contacts-card {
@@ -11,6 +18,10 @@
     margin: 0 0 40px -32px;
     align-items: center;
     justify-content: space-between;
+  }
+
+  @media screen and (min-width: $min-desktop-size) {
+    margin-bottom: 60px;
   }
 }
 
@@ -26,7 +37,7 @@
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
   @media screen and (min-width: $min-tablet-size) {
-    max-width: 224px;
+    max-width: calc((100% - 64px) / 3);
     margin-left: 32px;
   }
   &:not(:last-child) {
@@ -46,7 +57,7 @@
 
 .contacts-card__title {
   //   height: 16px;
-  margin-bottom: 20px;
+  
   border-radius: 4px;
   padding: 0px 16px;
   display: inline-block;
@@ -84,6 +95,10 @@
   @media screen and (min-width: $min-tablet-size) {
     @include fontRegular(null, 14px, 500, 26px, $secondary-text-color, left);
   }
+
+  @media screen and (min-width: $min-desktop-size) {
+    @include fontRegular(null, 16px, 500, 30px, $secondary-text-color, left);
+  }
 }
 
 .contacts-card__text {
@@ -97,6 +112,9 @@
   );
   @media screen and (min-width: $min-tablet-size) {
     @include fontRegular(null, 14px, 500, 23px, $description-text-color, left);
+  }
+  @media screen and (min-width: $min-desktop-size) {
+    @include fontRegular(null, 16px, 500, 29px, $description-text-color, left);
   }
 }
 
@@ -117,6 +135,9 @@
   );
   @media screen and (min-width: $min-tablet-size) {
     @include fontRegular(null, 14px, 500, 26px, $hero-ice-cream-bck, left);
+  }
+  @media screen and (min-width: $min-desktop-size) {
+    @include fontRegular(null, 16px, 500, 30px, $hero-ice-cream-bck, left);
   }
 }
 
@@ -149,6 +170,9 @@
   }
   @media screen and (min-width: $min-tablet-size) {
     @include fontRegular(null, 14px, 500, 26px, $description-text-color, left);
+  }
+  @media screen and (min-width: $min-desktop-size) {
+    @include fontRegular(null, 16px, 500, 29px, $description-text-color, left);
   }
 }
 
