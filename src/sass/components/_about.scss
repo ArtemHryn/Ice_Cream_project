@@ -86,7 +86,7 @@ align-items: center;
     max-width: 463px;  
     margin-left: 139px;
     position: static;
-    z-index: 10;
+    z-index: 2;
   }
 }
 
@@ -110,12 +110,11 @@ align-items: center;
 }
 
 .about__milk {
-position: absolute;
-width: 100vw;
-/* left: -20px;
-top:70px; */
-left: 0;
-top:500px;
+  width: 100vw;
+  position: absolute;
+  top: 72%;
+  left: 0;
+  transform: translateY(-50%);
 @media screen and (min-width:$min-tablet-size) {
   display: none;
  }
@@ -125,7 +124,8 @@ display: block;
 position: absolute; 
 width: 100%;
 left: 0;
-top:160px;
+// top:240px;
+top:63%;
 z-index: -1;
 }
 }
@@ -152,6 +152,7 @@ z-index: -1;
   {
     background-color: $accent-color;
     color: $heroButtonWhite;
+
     // background-color: $btn-hover-bck;
   }
   }
