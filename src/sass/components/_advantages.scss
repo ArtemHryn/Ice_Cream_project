@@ -5,8 +5,6 @@
 .advantages-list {
     @media screen and (min-width: $min-tablet-size) {
         display: flex;
-        flex-direction: row;
-        width: 527px;
     }
     &__item {
         @media screen and (max-width: $max-tablet-size) {
@@ -15,11 +13,19 @@
             }
         }
         @media screen and (min-width: $min-tablet-size) {
-            &:not(:first-child) {
-                margin-left: 17px;
+            width: 167px;
+        &:not(:first-child) {
+                margin-left: 22px;
             }
         }
+        @media screen and (min-width: $min-desktop-size) {
+            width: 288px;
+        &:not(:first-child) {
+            margin-left: 142px;
+        }
+        }
     }
+   
 }
 .advantages-list__number {
     font-family: $familyTitanOne;
@@ -33,6 +39,10 @@
         font-size: 48px;
         line-height: 1.14;
     }
+    @media screen and (min-width: $min-desktop-size) {
+        font-size: 58px;
+        margin-bottom: 16px;
+    }
     }
 .advantages-list__text {
     font-weight: 700;
@@ -42,6 +52,10 @@
     @media screen and (min-width: $min-tablet-size) and (max-width: $max-desktop-size) {
         font-size: 14px;
         line-height: 1.71;
+    }
+    @media screen and (min-width: $min-desktop-size) {
+        font-size: 16px;
+        line-height: 1.75;
     }
     }
 
@@ -54,6 +68,9 @@
     background-size: contain;
     @media screen and (min-width: $min-tablet-size) and (max-width: $max-desktop-size) {
         margin-bottom: 36px;
+    }
+    @media screen and (min-width: $min-desktop-size) {
+        margin-bottom: 29px;
     }
 }
 .advantages-list__content--one::before {

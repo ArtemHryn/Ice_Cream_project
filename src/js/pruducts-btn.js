@@ -1,13 +1,27 @@
 (() => {
-  const menuBtnRef = document.querySelector('[data-products-button]');
-  const mobileMenuRef = document.querySelector('[data-description]');
+  const refs = {
+    iceCreamEl: document.querySelector('.js-open-more-ice-cream'),
+    iceCoffeeEl: document.querySelector('.js-open-more-ice-coffee'),
+    milkshakesEl: document.querySelector('.js-open-more-milkshakes'),
+    iceCreamText: document.querySelector('.js-more-text-ice-cream'),
+    iceCoffeeText: document.querySelector('.js-more-text-ice-coffee'),
+    milkshakesText: document.querySelector('.js-more-text-milkshakes'),
+  };
 
-  menuBtnRef.addEventListener('click', () => {
-    const expanded =
-      menuBtnRef.getAttribute('aria-expended') === 'true' || false;
+  refs.iceCreamEl.addEventListener('click', iceCreamClass);
+  refs.iceCoffeeEl.addEventListener('click', iceCoffeeClass);
+  refs.milkshakesEl.addEventListener('click', milkshakesClass);
 
-    menuBtnRef.setAttribute('aria-expended', !expanded);
-
-    mobileMenuRef.classList.toggle('visually-hidden');
-  });
+  function iceCreamClass() {
+    refs.iceCreamText.classList.toggle('visually-hidden');
+    refs.iceCreamEl.classList.toggle('rotate-button');
+  }
+  function iceCoffeeClass() {
+    refs.iceCoffeeText.classList.toggle('visually-hidden');
+    refs.iceCoffeeEl.classList.toggle('rotate-button');
+  }
+  function milkshakesClass() {
+    refs.milkshakesText.classList.toggle('visually-hidden');
+    refs.milkshakesEl.classList.toggle('rotate-button');
+  }
 })();
