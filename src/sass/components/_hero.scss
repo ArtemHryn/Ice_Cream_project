@@ -18,12 +18,15 @@
   @media screen and (min-width: 767.98px) {
     height: 415px;
   }
+
+  // desktop
+  @media screen and (min-width: 1279.98px) {
+    height: 664px;
+  }
 }
 
 .hero-text {
-  width: 218px;
   padding-top: 194px;
-  padding-bottom: 158px;
   position: relative;
   z-index: 3;
 
@@ -39,25 +42,65 @@
       0.04em,
       $primary-text-color
     );
+
     // tablet
     @media screen and (min-width: 767.98px) {
       width: 162px;
       font-size: 22px;
     }
+
+    // desktop
+    @media screen and (min-width: 1279.98px) {
+      width: 277px;
+      margin-bottom: 24px;
+      @include fontTitanOne(
+        $familyTitanOne,
+        38px,
+        null,
+        44px,
+        0.04em,
+        $primary-text-color
+      );
+    }
   }
 
   &--accent {
     @include fontTitanOne(null, 48px, 400, 46px, null, $accent-color, null);
+
     // tablet
     @media screen and (min-width: 767.98px) {
       @include fontTitanOne(null, 34px, null, 31px, null, null, null);
     }
+    // tablet
+    @media screen and (min-width: 1279.98px) {
+      @include fontTitanOne(null, 58px, null, 52px, 0.04em, null, null);
+    }
   }
+
   // tablet
   @media screen and (min-width: 767.98px) {
+    width: 162px;
     padding-top: 101px;
-    padding-bottom: 0px;
-    font-size: 22px;
+  }
+
+  // desktop
+  @media screen and (min-width: 1279.98px) {
+    width: 277px;
+    padding-top: 147px;
+  }
+}
+
+.hero-btn {
+  display: flex;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 8px;
+
+      // desktop
+      @media screen and (min-width: 1279.98px) {
+        margin-right: 12px;
+      }
+    }
   }
 }
 
@@ -73,6 +116,11 @@
     right: 50%;
   }
 
+  // tablet
+  @media screen and (min-width: 1279.98px) {
+    right: 43%;
+  }
+
   &::after {
     content: '';
     display: block;
@@ -85,12 +133,19 @@
     z-index: -1;
     border-radius: 50%;
     transform: translate(-50%, -50%);
+
     // tablet
     @media screen and (min-width: 767.98px) {
       width: 335px;
       height: 333px;
       top: 38%;
       left: 70%;
+    }
+
+    // desktop
+    @media screen and (min-width: 1279.98px) {
+      width: 534px;
+      height: 534px;
     }
   }
 }
@@ -105,6 +160,11 @@
     bottom: 16px;
     z-index: 3;
   }
+
+  // desktop
+  @media screen and (min-width: 1279.98px) {
+    bottom: 60px;
+  }
 }
 
 .hero-milk-info {
@@ -115,6 +175,13 @@
     margin-bottom: 7px;
     @include fontRegular($familyDmSans, 8px, 400, 12px, $primary-text-color);
     text-transform: none;
+
+    // desktop
+    @media screen and (min-width: 1279.98px) {
+      width: 200px;
+      margin-bottom: 20px;
+      @include fontRegular(null, 14px, null, 20px, null);
+    }
   }
 }
 
@@ -142,6 +209,12 @@
       height: 16px;
       background-color: #fff;
       border-radius: 50%;
+
+      // desktop
+      @media screen and (min-width: 1279.98px) {
+        width: 30px;
+        height: 30px;
+      }
     }
   }
 
@@ -155,15 +228,30 @@
       $accent-color,
       left
     );
+
+    // desktop
+    @media screen and (min-width: 1279.98px) {
+      @include fontTitanOne(null, 46px, null, 53px, null, null, null);
+    }
   }
 
   &__subtitle {
     @include fontRegular(null, 8px, 400, 10px, $primary-text-color, right);
+
+    @media screen and (min-width: 1279.98px) {
+      @include fontRegular(null, 14px, null, 18px, null, null);
+    }
   }
 
   // tablet
   @media screen and (min-width: 767.98px) {
     display: block;
+  }
+
+  // desktop
+  @media screen and (min-width: 1279.98px) {
+    right: 16px;
+    top: 153px;
   }
 }
 
@@ -176,10 +264,16 @@
   text-transform: uppercase;
 
   &__item {
-    width: 90px;
+    width: 75px;
     position: absolute;
     top: 25px;
-    left: 3px;
+    left: 10px;
+
+    // desktop
+    @media screen and (min-width: 1279.98px) {
+      width: 132px;
+      top: 40px;
+    }
   }
 
   &__subtitle {
@@ -192,9 +286,28 @@
       $accent-color,
       right
     );
+
+    // desktop
+    @media screen and (min-width: 1279.98px) {
+      @include fontTitanOne(
+        null,
+        23px,
+        null,
+        23px,
+        0.01em,
+        $accent-color,
+        right
+      );
+    }
   }
 
+  // tablet
   @media screen and (min-width: 767.98px) {
     display: block;
+  }
+
+  // desktop
+  @media screen and (min-width: 1279.98px) {
+    right: 16px;
   }
 }

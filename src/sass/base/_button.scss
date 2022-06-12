@@ -1,14 +1,13 @@
 // hero links (not <button>)
 .button {
   @include centeredFlex(inline-flex);
+  @include fontRegular(null, 8px, 400, 10px, #ffffff, null);
+  @include transition(background-color);
   height: 24px;
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 0;
   padding-top: 0;
-  @include fontRegular(null, 8px, 400, 10px, #ffffff, null);
-  @include transition(background-color);
-
   border-radius: 20px;
   background-color: $heroButtonDarkPink;
 
@@ -25,6 +24,12 @@
   &--white:hover,
   &--white:focus {
     background-color: $btn-hover-bck;
+  }
+
+  // desktop
+  @media screen and (min-width: 1279.98px) {
+    height: 40px;
+    @include fontRegular(null, 14px, 400, 18px, null, null);
   }
 }
 
@@ -47,10 +52,22 @@
   &--hero {
     width: 18px;
     height: 18px;
+
+    // desktop
+    @media screen and (min-width: 1279.98px) {
+      width: 26px;
+      height: 26px;
+    }
   }
 
   &__hero-svg {
     width: 6px;
     height: 6px;
+
+    // desktop
+    @media screen and (min-width: 1279.98px) {
+      width: 10px;
+      height: 10px;
+    }
   }
 }
