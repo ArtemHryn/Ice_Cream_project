@@ -23,6 +23,8 @@ align-items: center;
   width: 100vw;
   @media screen and (min-width:$min-desktop-size){
     width: 100%;
+    max-width: $min-desktop-size;
+    margin: 0 auto;
   }  
 }
 
