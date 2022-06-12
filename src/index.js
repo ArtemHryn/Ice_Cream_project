@@ -1,3 +1,3 @@
 import './js/slider.js';
 import './js/menu-modal.js';
-import './js/pruducts-btn';
+import './js/pruducts-btn.js';

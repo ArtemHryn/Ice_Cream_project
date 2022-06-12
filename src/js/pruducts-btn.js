@@ -13,15 +13,15 @@
   refs.milkshakesEl.addEventListener('click', milkshakesClass);
 
   function iceCreamClass() {
-    refs.iceCreamText.classList.toggle('visually-hidden');
+    refs.iceCreamText.classList.toggle('text-hidder');
     refs.iceCreamEl.classList.toggle('rotate-button');
   }
   function iceCoffeeClass() {
-    refs.iceCoffeeText.classList.toggle('visually-hidden');
+    refs.iceCoffeeText.classList.toggle('text-hidder');
     refs.iceCoffeeEl.classList.toggle('rotate-button');
   }
   function milkshakesClass() {
-    refs.milkshakesText.classList.toggle('visually-hidden');
+    refs.milkshakesText.classList.toggle('text-hidder');
     refs.milkshakesEl.classList.toggle('rotate-button');
   }
 })();
