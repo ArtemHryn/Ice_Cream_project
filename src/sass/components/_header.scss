@@ -116,7 +116,7 @@
 
 .nav_item {
   @media screen and (max-width: $max-desktop-size) {
-    height: 42px;
+
     border-bottom: 1px solid $border_color;
     &:first-child {
       border-top: 1px solid $border_color;
@@ -126,7 +126,7 @@
 
 .nav_link {
   display: block;
-  padding: 13px 20px 11px 20px;
+  padding: 11px 20px;
   @include fontRegular('DM Sans', 14px, 700, 18px, $primary-text-color, null);
   @media screen and (min-width: $min-desktop-size) {
     padding: 15px;

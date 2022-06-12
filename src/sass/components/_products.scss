@@ -32,7 +32,7 @@
   @media screen and (min-width: $min-desktop-size) {
     font-size: 30px;
     line-height: 1.13;
-    padding-bottom: 16px;
+    margin-bottom: 16px;
   }
 }
 
@@ -119,52 +119,58 @@
     top: 0;
     content: '';
     display: block;
-    width: 280px;
-    height: 280px;
-    background-image: url('../images/tel/tel-pink-cream.png');
-    background-size: cover;
-    background-position: center;
-    transform: translateY(-50%);
+
+    @media screen and (max-width: $max-tablet-size) {
+      width: 280px;
+      height: 280px;
+      transform: translateY(-50%);
+      background-image: url('../images/tel/tel-pink-cream.png');
+      background-size: cover;
+      background-position: center;
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/tel/tel-pink-cream@2x.png');
+        background-size: cover;
+        background-position: center;
+      }
+    }
 
     @media screen and (min-width: $min-tablet-size) {
       width: 224px;
       height: 224px;
       transform: translateY(-65%);
+      background-image: url('../images/tablet/tablet-pink-cream.png');
+      background-size: cover;
+      background-position: center;
 
-      // @media (min-device-pixel-ratio: 2),
-      //      (-webkit-min-device-pixel-ratio: 2),
-      //      (min-resolution: 192dpi),
-      //      (min-resolution: 2dppx) {
-      //      background-image: url('../images/tel/tel-pink-cream@2x.png');
-      //      display: block;
-      //      position: absolute;
-      //      left: 0;
-      //      top: 0;
-      //      width: 224px;
-      //      height: 224px;
-      //      transform: translateY(-65%);
-      //   }
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/tel/tel-pink-cream@2x.png');
+        background-size: cover;
+        background-position: center;
+      }
     }
 
     @media screen and (min-width: $min-desktop-size) {
       width: 394px;
       height: 394px;
       transform: translateY(-67%);
-      background-image: url('../images/tel/tel-pink-cream@2x.png');
+      background-image: url('../images/tel/tel-pink-cream.png');
+      background-size: cover;
+      background-position: center;
 
-      // @media (min-device-pixel-ratio: 2),
-      //      (-webkit-min-device-pixel-ratio: 2),
-      //      (min-resolution: 192dpi),
-      //      (min-resolution: 2dppx) {
-      //      background-image: url('../images/tel/tel-pink-cream@2x.png');
-      //      display: block;
-      //      position: absolute;
-      //      left: 0;
-      //      top: 0;
-      //      width: 394px;
-      //      height: 394px;
-      //      transform: translateY(-67%);
-      //   }
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/tel/tel-pink-cream@2x.png');
+        background-size: cover;
+        background-position: center;
+      }
     }
   }
 }
