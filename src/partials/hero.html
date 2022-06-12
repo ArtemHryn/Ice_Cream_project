@@ -1,6 +1,6 @@
 <!-- section hero -->
 <section class="hero">
-  <div class="container">
+  <div class="container wrapp-hero">
     <!-- hero title -->
     <div class="hero-text">
       <h1 class="hero-text__title">
@@ -76,8 +76,28 @@
       </li>
     </ul>
 
-    <div class="cta-img">
-      <!-- <img src="" alt="tasty ice-cream" /> -->
-    </div>
+    <!-- <div class="cta-img"></div> -->
+    <ul class="cta-img">
+      <li>
+        <picture>
+          <source
+            srcset="
+              ./images/tablet/tablet-girl1-icecream.png    1x,
+              ./images/tablet/tablet-girl1-icecream@2x.png 2x
+            "
+            media="(min-width:767px)"
+          />
+          <img
+            src="./images/tablet/tablet-girl1-icecream.png"
+            alt="tasty ice-cream"
+          />
+        </picture>
+      </li>
+      <li
+        class="cta-img__item animate__animated animate__tada animate__delay-1s animate__repeat-3"
+      >
+        <p class="cta-img__subtitle">sooooooo tasty!</p>
+      </li>
+    </ul>
   </div>
 </section>

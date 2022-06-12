@@ -1,11 +1,14 @@
 .hero {
   width: 100%;
-  height: 502px;
   max-width: 1280px;
   margin: 0 auto;
-  background-color: $hero-bck;
-  position: relative;
   overflow: hidden;
+  background-color: $hero-bck;
+}
+
+.wrapp-hero {
+  position: relative;
+  height: 502px;
   // tablet
   @media screen and (min-width: 767.98px) {
     height: 415px;
@@ -112,6 +115,10 @@
 
 .amount-list {
   display: none;
+  position: absolute;
+  right: 32px;
+  top: 91px;
+
   &__item {
     &:not(:last-child) {
       margin-bottom: 16px;
@@ -129,14 +136,44 @@
       right
     );
   }
+
+  &__subtitle {
+    @include fontRegular(null, 8px, 400, 10px, $primary-text-color, right);
+  }
+
   @media screen and (min-width: 767.98px) {
     display: block;
-    position: absolute;
-    right: 32px;
-    top: 91px;
   }
 }
 
 .cta-img {
   display: none;
+  position: absolute;
+  right: 32px;
+  bottom: 0;
+  z-index: 3;
+  text-transform: uppercase;
+
+  &__item {
+    width: 90px;
+    position: absolute;
+    top: 25px;
+    left: 3px;
+  }
+
+  &__subtitle {
+    @include fontTitanOne(
+      $familyTitanOne,
+      14px,
+      null,
+      14px,
+      0.01em,
+      $accent-color,
+      right
+    );
+  }
+
+  @media screen and (min-width: 767.98px) {
+    display: block;
+  }
 }
