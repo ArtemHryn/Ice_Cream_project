@@ -20,7 +20,7 @@ align-items: center;
 }
 }
 .about__milk-img {
-  // width: 100vw;
+  width: 100vw;
   @media screen and (min-width:$min-desktop-size){
     width: 100%;
   }  
@@ -74,7 +74,7 @@ align-items: center;
   width: 501px;   
   }
 }
-.about__text-wrsolap {
+.about__text-wrap {
   // border: 1px id red;
   max-width: 220px;  
   // position: relative;
