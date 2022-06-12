@@ -105,13 +105,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
+    top: 0px;
+    left: 0px;
+    transform: translate(-50%, -50%);
     @media screen and (min-width: $min-tablet-size) {
-      top: 20px;
-      left: 6px;
+      transform: translate(-100%, -50%);
     }
     @media screen and (min-width: $min-desktop-size) {
-      top: 32px;
-      left: 105px;
     }
   }
 }
