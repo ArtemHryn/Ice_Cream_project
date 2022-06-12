@@ -7,14 +7,10 @@
   padding-bottom: 0;
   padding-top: 0;
   @include fontRegular(null, 8px, 400, 10px, #ffffff, null);
+  @include transition(background-color);
 
   border-radius: 20px;
-
   background-color: $heroButtonDarkPink;
-
-  &--right-margin {
-    margin-right: 8px;
-  }
 
   &--white {
     background-color: $heroButtonWhite;
@@ -29,5 +25,32 @@
   &--white:hover,
   &--white:focus {
     background-color: $btn-hover-bck;
+  }
+}
+
+// button with pink arrow default style
+
+.button-arrow {
+  @include centeredFlex(flex);
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  fill: $heroButtonDarkPink;
+  background-color: #ffffff;
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $btn-hover-bck;
+  }
+
+  &--hero {
+    width: 18px;
+    height: 18px;
+  }
+
+  &__hero-svg {
+    width: 6px;
+    height: 6px;
   }
 }
