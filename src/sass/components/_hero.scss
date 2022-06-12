@@ -125,8 +125,23 @@
   top: 91px;
 
   &__item {
+    position: relative;
+    z-index: 1;
     &:not(:last-child) {
       margin-bottom: 16px;
+    }
+
+    &::after {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+      border-radius: 50%;
     }
   }
 
@@ -138,7 +153,7 @@
       32px,
       0.04em,
       $accent-color,
-      right
+      left
     );
   }
 
@@ -146,6 +161,7 @@
     @include fontRegular(null, 8px, 400, 10px, $primary-text-color, right);
   }
 
+  // tablet
   @media screen and (min-width: 767.98px) {
     display: block;
   }
