@@ -21,7 +21,8 @@
 
   // desktop
   @media screen and (min-width: $min-desktop-size) {
-    max-width: $min-desktop-size;
+    // max-width: $min-desktop-size;
+    max-width: 1500px;
     padding-left: 16px;
     padding-right: 16px;
   }
