@@ -78,5 +78,15 @@
   height: 40px;
   border-radius: 50%;
   transform: translate(50%, -50%);
-  background-color: rgba(170, 212, 145, 1);
+  background-color: rgba(170, 212, 145, 0.8);
+  color: $primary-text-color;
+  @include transition(background-color, 350ms);
+  &:hover, &:focus{
+    background-color: rgba(170, 212, 145, 1);
+    color: $description-text-color;
+  }
+}
+
+.our-location__icon-close{
+  stroke: currentColor;
 }
