@@ -1,5 +1,12 @@
 .page-footer {
   background-color: $footer-bck;
+  padding-top: 24px;
+  @include tablet {
+    padding-top: 20px;
+  }
+  @include desktop {
+    padding-top: 60px;
+  }
 }
 .page-footer__content {
   padding-bottom: 40px;
