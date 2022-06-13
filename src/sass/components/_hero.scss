@@ -33,6 +33,9 @@
     width: 218px;
     margin-bottom: 20px;
     text-transform: uppercase;
+    animation: bounceIn;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
     @include fontTitanOne(
       $familyTitanOne,
       26px,

@@ -24,6 +24,9 @@
   width: 199px;
   height: 50px;
   cursor: pointer;
+    animation: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
 .menu-button {
