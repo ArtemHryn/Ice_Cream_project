@@ -48,9 +48,19 @@
   border: 0;
   background-color: transparent;
   cursor: pointer;
+  color: $heroButtonWhite;
+  @include transition(color);
+  &:hover,
+  &:focus {
+    color: $hero-bck;
+  }
   @media screen and (min-width: $min-desktop-size) {
     display: none;
   }
+}
+
+.menu-button__icon-close {
+  stroke: currentColor;
 }
 
 .menu-button__container {
@@ -116,7 +126,6 @@
 
 .nav_item {
   @media screen and (max-width: $max-desktop-size) {
-
     border-bottom: 1px solid $border_color;
     &:first-child {
       border-top: 1px solid $border_color;
