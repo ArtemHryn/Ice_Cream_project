@@ -1,0 +1,157 @@
+<div class="backdrop-buy is-hidden" data-modal-buy>
+  <div class="modal-buy">
+    <p class="modal__title">Choose your favorite</p>
+    <ul class="product-list list">
+      <li class="product-item">
+        <div class="product-container product-container__icecream">
+          <p class="product-title">icecream</p>
+          <picture>
+            <source
+              srcset="
+                ./images/desktop/desktop-pink-cream.png    1x,
+                ./images/desktop/desktop-pink-cream@2x.png 2x
+              "
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="
+                ./images/tablet/tablet-pink-cream.png    1x,
+                ./images/tablet/tablet-pink-cream@2x.png 2x
+              "
+              media="(min-width: 768px)"
+            />
+            <img
+              srcset="
+                ./images/tel/tel-pink-cream.png    1x,
+                ./images/tel/tel-pink-cream@2x.png 2x
+              "
+              src="./images/desktop/desktop-pink-cream@2x.png"
+              alt="gallery"
+              class="product-img"
+            />
+          </picture>
+        </div>
+        <div id="counter-1" class="product-quantity">
+          <button data-decrease class="button-svg">
+            <svg class="icon-minus">
+              <use href="./images/sprite/sprite.svg#icon-minus"></use>
+            </svg>
+          </button>
+          <span data-value class="product-data">0</span>
+          <button data-increase class="button-svg">
+            <svg class="icon-plus">
+              <use href="./images/sprite/sprite.svg#icon-plus"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div>
+          <p class="product-price">Price-12$</p>
+        </div>
+      </li>
+      <li class="product-item">
+        <div class="product-container product-container__icecoffee">
+          <p class="product-title">icecoffee</p>
+          <picture>
+            <source
+              srcset="
+                ./images/desktop/deskstop-coffee.png    1x,
+                ./images/desktop/deskstop-coffee@2x.png 2x
+              "
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="
+                ./images/tablet/tablet-coffee.png    1x,
+                ./images/tablet/tablet-coffee@2x.png 2x
+              "
+              media="(min-width: 768px)"
+            />
+            <img
+              srcset="
+                ./images/tel/tel-cofee.png    1x,
+                ./images/tel/tel-cofee@2x.png 2x
+              "
+              src="./images/desktop/deskstop-coffee@2x.png"
+              alt="gallery"
+              class="product-img"
+            />
+          </picture>
+        </div>
+        <div id="counter-1" class="product-quantity">
+          <button data-decrease class="button-svg">
+            <svg class="icon-minus">
+              <use href="./images/sprite/sprite.svg#icon-minus"></use>
+            </svg>
+          </button>
+          <span data-value class="product-data">0</span>
+          <button data-increase class="button-svg">
+            <svg class="icon-plus">
+              <use href="./images/sprite/sprite.svg#icon-plus"></use>
+            </svg>
+          </button>
+        </div>
+
+        <p class="product-price">Price-15$</p>
+      </li>
+      <li class="product-item">
+        <div class="product-container product-container__milkshakes">
+          <p class="product-title">milkshakes</p>
+          <picture>
+            <source
+              srcset="
+                ./images/desktop/deskstop-milkshake.png    1x,
+                ./images/desktop/deskstop-milkshake@2x.png 2x
+              "
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="
+                ./images/tablet/tablet-milkshake.png    1x,
+                ./images/tablet/tablet-milkshake@2x.png 2x
+              "
+              media="(min-width: 768px)"
+            />
+            <img
+              srcset="
+                ./images/tel/tel-milkshake.png    1x,
+                ./images/tel/tel-milkshake@2x.png 2x
+              "
+              src="./images/desktop/deskstop-milkshake@2x.png"
+              alt="gallery"
+              class="product-img"
+            />
+          </picture>
+        </div>
+        <div id="counter-1" class="product-quantity">
+          <button data-decrease class="button-svg">
+            <svg class="icon-minus">
+              <use href="./images/sprite/sprite.svg#icon-minus"></use>
+            </svg>
+          </button>
+          <span data-value class="product-data">0</span>
+          <button data-increase class="button-svg">
+            <svg class="icon-plus">
+              <use href="./images/sprite/sprite.svg#icon-plus"></use>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <p class="product-price">Price-10$</p>
+        </div>
+      </li>
+    </ul>
+    <div class="total-price">
+      <p>Total price - 50$</p>
+    </div>
+    <button type="button" class="buy-button buy-button__modal">Buy</button>
+    <button data-modal-buy-close type="button" class="modal-close">
+      <svg class="modal-close__icon">
+        <use
+          href="./images/sprite/sprite.svg#icon-close"
+          class="modal-close__icon_color"
+        ></use>
+      </svg>
+    </button>
+  </div>
+</div>

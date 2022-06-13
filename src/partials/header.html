@@ -30,7 +30,12 @@
           ></use>
         </svg>
       </button>
-      <button type="button" class="buy-button buy-button__menu">
+      <button
+        type="button"
+        class="buy-button buy-button__menu"
+        data-buy-modal-close
+        data-modal-buy-open
+      >
         Buy now
         <svg class="buy-button_icon" width="8" height="12">
           <use href="./images/sprite/sprite.svg#icon-wide-arrow-right"></use>
@@ -39,7 +44,7 @@
       <nav class="nav">
         <ul class="nav-list list" data-anchor-close>
           <li class="nav_item">
-            <a href="#hero" class="nav_link link">Home</a>
+            <a href="#hero" class="nav_link nav_link_current link">Home</a>
           </li>
           <li class="nav_item">
             <a href="#about_us" class="nav_link link">About us</a>
@@ -56,7 +61,12 @@
         </ul>
       </nav>
     </div>
-    <button type="button" class="buy-button buy-button__header js-buy-button">
+    <button
+      type="button"
+      class="buy-button buy-button__header js-buy-button"
+      data-buy-modal-close
+      data-modal-buy-second-open
+    >
       Buy now
       <svg class="buy-button_icon" width="8" height="12">
         <use href="./images/sprite/sprite.svg#icon-wide-arrow-right"></use>
