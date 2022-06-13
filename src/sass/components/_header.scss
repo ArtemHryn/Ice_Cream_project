@@ -36,6 +36,11 @@
   @media screen and (min-width: $min-desktop-size) {
     display: none;
   }
+  @include transition(color);
+  &:hover,
+  &:focus {
+    color: $primary-text-color;
+  }
 }
 
 .close-button {
@@ -52,7 +57,7 @@
   @include transition(color);
   &:hover,
   &:focus {
-    color: $hero-bck;
+    color: $secondary-text-color;
   }
   @media screen and (min-width: $min-desktop-size) {
     display: none;
@@ -83,10 +88,10 @@
   border: 0;
   cursor: pointer;
   @include fontRegular('DM Sans', 16px, 700, 21px, $accent-color, null);
-
+  @include transition(background-color);
   &:hover,
   &:focus {
-    background: $btn-hover-bck;
+    background-color: $btn-hover-bck;
   }
 }
 
@@ -136,15 +141,20 @@
 .nav_link {
   display: block;
   padding: 11px 20px;
+  @include transition(color);
   @include fontRegular('DM Sans', 14px, 700, 18px, $primary-text-color, null);
   @media screen and (min-width: $min-desktop-size) {
     padding: 15px;
     @include fontRegular('DM Sans', 16px, 700, 21px, $primary-text-color, null);
   }
+
   &:hover,
   &:focus {
     color: $heroButtonDarkPink;
   }
+}
+.nav_link_current {
+  color: $heroButtonDarkPink;
 }
 
 .menu-container {

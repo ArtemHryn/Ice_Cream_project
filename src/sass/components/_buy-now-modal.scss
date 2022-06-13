@@ -1,0 +1,248 @@
+.backdrop-buy {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $backdrop-bkgd-color;
+  z-index: 99;
+  opacity: 1;
+  @include transition((opacity, background-color));
+}
+
+.backdrop-buy.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop-buy.is-hidden .modal {
+  transform: translateX(-50%) scale(0);
+}
+
+.modal-buy {
+  background: linear-gradient(-45deg, #ffffff, #ffb8ca, #e17992, #d41443);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+
+  position: absolute;
+  top: 93px;
+  left: 50%;
+  max-width: 450px;
+  min-width: 260px;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  transform: translateX(-50%) scale(1);
+  @include transition(transform);
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 22px;
+
+  @media screen and (min-width: 768px) {
+    top: 208px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    top: 221px;
+    max-width: 528px;
+    height: auto;
+    padding: 10px;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.modal-close {
+  color: $primary-text-color;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: inherit;
+  @include transition(color);
+  &:hover,
+  &:focus {
+    color: $secondary-text-color;
+  }
+}
+
+.modal-close__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+  //   @include transition(fill);
+
+  // .modal-close:focus & {
+  //   fill: var(--color-2196f3);
+  // }
+}
+
+.modal-close__icon_color {
+  stroke: currentColor;
+}
+
+.modal__title {
+  mix-blend-mode: difference;
+  margin-top: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #7d7d7d;
+  @include fontTitanOne(null, 31px, 400, 46px, null, null, center);
+
+  //   @media screen and (min-width: 1200px) {
+  // @include font(700, 20px, 1.15, 0.03em);
+  // height: 23px;
+  //   }
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 90px;
+}
+
+.product-item {
+  width: calc(100% / 3 - 10px);
+  align-items: center;
+}
+
+.product-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.product-container {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  border-radius: 22px;
+  margin-bottom: 20px;
+  @include transition(box-shadow);
+}
+
+.product-container__icecream {
+  background: #ffb8ca;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 10px 10px rgba(212, 20, 68, 0.87);
+  }
+}
+.product-container__icecoffee {
+  background: #f0d1a5;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 10px 10px rgba(212, 20, 68, 0.87);
+  }
+}
+
+.product-container__milkshakes {
+  background: #c2e297;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 10px 10px rgba(212, 20, 68, 0.87);
+  }
+}
+
+.product-title {
+  @include fontTitanOne(
+    $familyTitanOne,
+    13px,
+    400,
+    34px,
+    0.04em,
+    $primary-text-color,
+    center
+  );
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+
+.product-price {
+  @include fontRegular('DM Sans', 14px, 700, 18px, $primary-text-color, center);
+}
+
+.icon-plus {
+  width: 15px;
+  height: 15px;
+  fill: #fff;
+  &:hover,
+  &:focus {
+    fill: #d41443;
+  }
+}
+.icon-minus {
+  width: 15px;
+  height: 15px;
+  fill: #fff;
+  &:hover,
+  &:focus {
+    fill: #d41443;
+  }
+}
+
+.button-svg {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: inherit;
+}
+
+.product-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.product-data {
+  @include fontRegular('DM Sans', 16px, 700, 18px, $primary-text-color, null);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.product-price {
+  @include fontRegular('DM Sans', 16px, 700, 18px, $primary-text-color, null);
+}
+
+.total-price {
+  @include fontRegular('DM Sans', 18px, 700, 18px, $primary-text-color, null);
+
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+.buy-button__modal {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 160px;
+  height: 44px;
+  margin-bottom: 30px;
+  @include transition(background-color);
+  &:hover,
+  &:focus {
+    background-color: $btn-hover-bck;
+  }
+}
