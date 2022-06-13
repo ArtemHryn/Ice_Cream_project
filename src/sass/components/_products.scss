@@ -47,6 +47,9 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $accent-color;
+  animation: zoomIn;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 
   @media screen and (min-width: $min-tablet-size) {
     font-size: 48px;
@@ -247,7 +250,7 @@
     top: 0;
     content: '';
     display: block;
-    
+
     @media screen and (max-width: $max-tablet-size) {
       width: 280px;
       height: 280px;
@@ -403,12 +406,12 @@
       transform: translate(0);
     }
   }
-
 }
 
 .products__full-description {
   @extend .products__main-description;
-  transition: opacity 250ms $footer-animation, visibility 250ms $footer-animation;
+  transition: opacity 250ms $footer-animation,
+    visibility 250ms $footer-animation;
 }
 
 .products__btn-icon {

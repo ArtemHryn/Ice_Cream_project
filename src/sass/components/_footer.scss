@@ -22,6 +22,9 @@
 .page-footer__text-thumb {
   margin-bottom: 40px;
   max-width: 234px;
+  animation: bounceIn;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
   @include tablet {
     margin-bottom: 0;
     max-width: 340px;
