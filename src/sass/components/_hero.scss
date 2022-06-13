@@ -120,35 +120,31 @@
     right: 43%;
   }
 
-  &::before {
+  &::after {
     content: '';
     display: block;
     width: 346px;
     height: 344px;
     background-color: $hero-ice-cream-bck;
     position: absolute;
-    top: 0;
-    right: -90px;
-    z-index: -10;
+    top: 40%;
+    left: 50%;
+    z-index: -1;
     border-radius: 50%;
-    animation: Beat;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+    transform: translate(-50%, -50%);
 
     // tablet
     @media screen and (min-width: 767.98px) {
       width: 335px;
       height: 333px;
-      top: -35px;
-      left: -65px;
+      top: 38%;
+      left: 70%;
     }
 
     // desktop
     @media screen and (min-width: 1279.98px) {
       width: 534px;
       height: 534px;
-      top: -55px;
-      left: -100px;
     }
   }
 }
@@ -312,27 +308,5 @@
   // desktop
   @media screen and (min-width: 1279.98px) {
     right: 16px;
-  }
-}
-
-@keyframes Beat {
-  0% {
-    transform: scale(1);
-  }
-
-  14% {
-    transform: scale(1.1);
-  }
-
-  28% {
-    transform: scale(1);
-  }
-
-  42% {
-    transform: scale(1.1);
-  }
-
-  70% {
-    transform: scale(1);
   }
 }
