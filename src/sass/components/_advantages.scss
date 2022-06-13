@@ -1,6 +1,10 @@
 .advantages {
-    padding-bottom: 80px;
+    padding-bottom: 40px;
     background-color: $footer-bck;
+    @media screen and (min-width: $min-desktop-size) {
+        padding-bottom: 60px;
+        }
+    
 }
 .advantages-list {
     @media screen and (min-width: $min-tablet-size) {
