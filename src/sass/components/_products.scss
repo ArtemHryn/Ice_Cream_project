@@ -379,7 +379,7 @@
 
   &:hover .products__btn-icon,
   &:focus .products__btn-icon {
-    transform: scale(1.3);
+    transform: scale(1.3) rotate(90deg);
     fill: $primary-text-color;
   }
 
@@ -420,7 +420,7 @@
 }
 
 .rotate-button {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
 }
 
 .products__full-description.text-hidder {
