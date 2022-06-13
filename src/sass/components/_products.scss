@@ -367,6 +367,8 @@
 }
 
 .products__btn--open {
+  position: relative;
+  overflow: hidden;
   @include centeredFlex(flex);
   margin-left: auto;
   margin-right: auto;
@@ -378,22 +380,43 @@
   &:hover .products__btn-icon,
   &:focus .products__btn-icon {
     transform: scale(1.3);
+    fill: $primary-text-color;
   }
 
   @media screen and (min-width: $min-desktop-size) {
     margin-bottom: 60px;
   }
+
+  &::before {
+    content: '';
+    border-radius: 50%;
+    background-color: $accent-color;
+    transform: translate(-110%, 90%);
+    width: 120%;
+    height: 120%;
+    position: absolute;
+    transition: transform 350ms $footer-animation;
+  }
+  &:hover,
+  &:focus {
+    &::before {
+      transform: translate(0);
+    }
+  }
+
 }
 
 .products__full-description {
   @extend .products__main-description;
-  transition: opacity 250ms linear, visibility 250ms linear;
+  transition: opacity 250ms $footer-animation, visibility 250ms $footer-animation;
 }
 
 .products__btn-icon {
+  position: relative;
   width: 15px;
   height: 13px;
   fill: $accent-color;
+  transition: scale 350ms $footer-animation;
 }
 
 .rotate-button {
