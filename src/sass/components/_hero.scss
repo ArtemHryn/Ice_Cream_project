@@ -33,6 +33,9 @@
     width: 218px;
     margin-bottom: 20px;
     text-transform: uppercase;
+    animation: bounceIn;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
     @include fontTitanOne(
       $familyTitanOne,
       26px,
@@ -106,13 +109,16 @@
 .crema-pic {
   position: absolute;
   bottom: 0;
-  right: 35%;
+  right: 5%;
   z-index: 2;
   transform: translateX(50%);
+  animation: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 
   // tablet
   @media screen and (min-width: 767.98px) {
-    right: 50%;
+    right: 40%;
   }
 
   // tablet
