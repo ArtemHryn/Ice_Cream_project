@@ -1,6 +1,13 @@
 .customer-reviews {
-  padding-top: 80px;
-  padding-bottom: 48px;
+  padding-top: 40px;
+  padding-bottom: 24px;
+  @media screen and (min-width: $min-tablet-size) {
+    padding-bottom: 40px;
+  }
+  @media screen and (min-width: $min-tablet-size) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 /* Слайдер */
