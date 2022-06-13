@@ -65,9 +65,9 @@
 
 
 /*....advantages icons....*/
-.advantages-list__content::before {
+.advantages-list__number::before {
     content: "";
-    display: inline-block;
+    display: block;
     margin-bottom: 16px;
     background-size: contain;
     @media screen and (min-width: $min-tablet-size) and (max-width: $max-desktop-size) {
@@ -77,7 +77,7 @@
         margin-bottom: 29px;
     }
 }
-.advantages-list__content--one::before {
+.advantages-list__number--one::before {
     width: 33px;
     height: 50px;
     background-image: url(../images/icons/icon1.png); 
@@ -85,7 +85,7 @@
             background-image: url(../images/icons/icon1@2x.png);
         }
     }
-.advantages-list__content--two::before {
+.advantages-list__number--two::before {
     width: 50px;
     height: 50px;
     background-image: url(../images/icons/icon2.png); 
@@ -93,7 +93,7 @@
         background-image: url(../images/icons/icon2@2x.png);
     }
 }
-.advantages-list__content--three::before {
+.advantages-list__number--three::before {
     width: 44px;
     height: 50px;
     background-image: url(../images/icons/icon3.png); 
