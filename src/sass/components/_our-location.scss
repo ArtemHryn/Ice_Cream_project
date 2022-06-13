@@ -1,0 +1,82 @@
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  @include transition(opacity);
+  @include transition(visibility);
+  z-index: 41;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  padding: 40px;
+  max-width: 90vw;
+  min-height: 581px;
+  transform: translate(-50%, -50%) scale(1);
+  @include transition(transform, 1000ms);
+
+  background-image: linear-gradient(to left, #aad491, $hero-bck);
+  @media screen and (max-width: $max-tablet-size) {
+    padding: 10px;
+  }
+  @media screen and (min-width: $min-tablet-size) {
+    max-width: 650px;
+    min-height: 609px;
+  }
+  @media screen and (min-width: $min-desktop-size) {
+    max-width: 850px;
+    min-height: 609px;
+  }
+}
+
+.our-location {
+  width: 100%;
+  height: 90%;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.our-location__ice-cream {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%, 20%);
+  width: 100px;
+  @media screen and (max-width: $max-tablet-size) {
+    transform: translate(-20%, 20%);
+  }
+}
+.our-location__milkshake {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 20%);
+  width: 100px;
+  @media screen and (max-width: $max-tablet-size) {
+    transform: translate(20%, 20%);
+  }
+}
+
+.our-location__close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+  background-color: rgba(170, 212, 145, 1);
+}
