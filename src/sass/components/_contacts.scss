@@ -1,13 +1,13 @@
 .contacts {
-  padding-bottom: 48px;
+  padding-bottom: 24px;
   background: $footer-bck;
   background: linear-gradient(0deg, $footer-bck 70%, $primary-text-color 100%);
 
   @media screen and (min-width: $min-tablet-size) {
-    padding-bottom: 40px;
+    padding-bottom: 20px;
   }
   @media screen and (min-width: $min-desktop-size) {
-    padding-bottom: 120px;
+    padding-bottom: 60px;
   }
 }
 
@@ -57,7 +57,7 @@
 
 .contacts-card__title {
   //   height: 16px;
-  
+
   border-radius: 4px;
   padding: 0px 16px;
   display: inline-block;
@@ -212,28 +212,34 @@
   &--red {
     background-color: $hover-bck;
     color: $primary-text-color;
+    @include btnAnimation($customer_reviews_pagination, 22px);
   }
 
   &--white {
     background-color: $primary-text-color;
     color: $accent-color;
+    @include btnAnimation($accent-color, 22px);
   }
 
   &--red:hover,
   &--red:focus {
-    background: $heroBtnHover;
+    background: $btn-hover-bck;
+    color: $accent-color;
   }
 
   &--white:hover,
   &--white:focus {
-    background: $btn-hover-bck;
+    background: $heroBtnHover;
+    color: $primary-text-color;
   }
 
   &__icon--red {
     margin-left: 8px;
+    fill: currentColor;
   }
 
   &__icon--white {
     margin-left: 8px;
+    fill: currentColor;
   }
 }

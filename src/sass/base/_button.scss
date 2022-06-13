@@ -2,7 +2,6 @@
 .button {
   @include centeredFlex(inline-flex);
   @include fontRegular(null, 8px, 400, 10px, #ffffff, null);
-  @include transition(background-color);
   height: 24px;
   padding-left: 15px;
   padding-right: 15px;
@@ -10,20 +9,23 @@
   padding-top: 0;
   border-radius: 20px;
   background-color: $heroButtonDarkPink;
-
+  @include btnAnimation($customer_reviews_pagination, 20px);
   &--white {
     background-color: $heroButtonWhite;
     color: $heroButtonWhiteTx;
+    @include btnAnimation($heroBtnHover, 22px);
   }
 
   &:hover,
   &:focus {
-    background-color: $heroBtnHover;
+    background-color: $btn-hover-bck;
+    color: $accent-color;
   }
 
   &--white:hover,
   &--white:focus {
-    background-color: $btn-hover-bck;
+    background-color: $heroBtnHover;
+    color: $primary-text-color;
   }
 
   // desktop
