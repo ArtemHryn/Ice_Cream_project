@@ -310,3 +310,29 @@
     right: 16px;
   }
 }
+
+#canvas-basic {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  // mobile
+  @media screen and (min-width: 110px) {
+    height: 502px;
+  }
+
+  // tablet
+  @media screen and (min-width: 767.98px) {
+    height: 415px;
+  }
+
+  // desktop
+  @media screen and (min-width: 1279.98px) {
+    height: 664px;
+  }
+}
