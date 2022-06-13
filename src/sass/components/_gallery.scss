@@ -1,6 +1,12 @@
 .gallery {
+    padding-top: 40px;
+    padding-bottom: 40px;
     height: auto;
     background-image: linear-gradient(to bottom,
     $about-bck 40%,
     $primary-text-color 40%);
+@media screen and (min-width: $min-desktop-size) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    }
 }
