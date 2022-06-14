@@ -1,0 +1,143 @@
+.backdrop-about {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $backdrop-bkgd-color;
+    z-index: 99;
+    opacity: 1;
+    @include transition((opacity, background-color));
+  }
+  
+  .backdrop-about.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .backdrop-about.is-hidden .modal {
+    transform: translateX(-50%) scale(0);
+  }
+  
+  .modal-about {
+    background: linear-gradient(-45deg, #ffffff, #ffb8ca, #e17992, #d41443);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+  overflow: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(1);
+    @include transition(transform);
+  
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 22px;
+
+    /* max-width: 450px;
+    min-width: 260px;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    
+  
+    @media screen and (min-width: 1200px) {
+      max-width: 528px;
+      height: 80vh;
+      padding: 10px;
+    }
+  } */
+  
+  padding: 40px;
+  width: 90vw;
+  height: 100vh;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
+}
+
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .modal-about-img {
+    max-height: 40vh;
+    @media screen and (min-width:$min-tablet-size) {
+      max-width: 40vw;  
+    }
+    
+  }
+  .modal-about-item{
+    @media screen and (min-width:$min-tablet-size) {
+    display: flex;
+    align-items: center;
+  }
+  }
+
+  .modal-about__text{
+    margin-left: 20px;
+        
+    @include fontRegular(DM Sans, 12px, 500, 19px, $secondary-text-color);
+    margin-bottom: 10px;
+    @media screen and (min-width: $min-tablet-size) {
+      @include fontRegular(DM Sans, 14px, 500, 25px, $secondary-text-color);
+    }
+    @media screen and (min-width: $min-desktop-size) {
+      @include fontRegular(DM Sans, 14px, 500, 27px, $secondary-text-color);
+      margin-bottom: 15px;
+    }
+  }
+
+    .modal-close {
+    color: $primary-text-color;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: inherit;
+    @include transition(color);
+    &:hover,
+    &:focus {
+      color: $secondary-text-color;
+    }
+  }
+  
+  .modal-close__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    transform: translate(-50%, -50%);
+    //   @include transition(fill);
+  
+    // .modal-close:focus & {
+    //   fill: var(--color-2196f3);
+    // }
+  }
+  
+  .modal-close__icon_color {
+    stroke: currentColor;
+  }
