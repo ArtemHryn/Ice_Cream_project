@@ -4,3 +4,4 @@ import './js/pruducts-btn.js';
 import './js/our-location.js';
 import './js/buy-modal.js';
 import './js/buy-ice-cream.js';
+import './js/about-modal.js';
