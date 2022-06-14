@@ -5,3 +5,4 @@ import './js/our-location.js';
 import './js/franchise.js';
 import './js/buy-modal.js';
 import './js/buy-ice-cream.js';
+import './js/about-modal.js';
