@@ -4,13 +4,17 @@
   height: auto;
   background-image: linear-gradient(
     to bottom,
-    $about-bck 40%,
-    $primary-text-color 40%
+    $about-bck 50%,
+    $primary-text-color 50%
   );
   @media screen and (min-width: $min-desktop-size) {
     padding-top: 60px;
     padding-bottom: 60px;
   }
+}
+
+.gallery-container{
+  @include centeredFlex();
 }
 
 .gallery-list {
@@ -31,6 +35,7 @@
 .gallery__img {
   border-radius: 6px;
 }
+
 .gallery__item {
   @include transition(transform);
   &:hover {
