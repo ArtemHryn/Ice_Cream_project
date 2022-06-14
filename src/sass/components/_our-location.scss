@@ -28,6 +28,7 @@
   @include transition(transform, 1000ms);
 
   background-image: linear-gradient(to left, #aad491, $hero-bck);
+  border-radius: 22px;
   @media screen and (max-width: $max-tablet-size) {
     padding: 10px;
   }
@@ -43,7 +44,8 @@
 
 .our-location {
   width: 100%;
-  height: 90%;
+  height: 85%;
+  margin-bottom: 8px;
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
@@ -72,21 +74,26 @@
 
 .our-location__close-button {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 20px;
+  right: 20px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   transform: translate(50%, -50%);
-  background-color: rgba(170, 212, 145, 0.8);
+  background-color: transparent;
   color: $primary-text-color;
   @include transition(background-color, 350ms);
-  &:hover, &:focus{
+  &:hover,
+  &:focus {
     background-color: rgba(170, 212, 145, 1);
     color: $description-text-color;
   }
 }
 
-.our-location__icon-close{
+.our-location__icon-close {
   stroke: currentColor;
+}
+
+.our-location__text {
+  @include fontRegular(DM Sans, 32px, 700, 40px, $accent-color, center);
 }

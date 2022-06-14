@@ -78,7 +78,7 @@
             />
           </picture>
         </div>
-        <div id="counter-1" class="product-quantity">
+        <div id="counter-2" class="product-quantity">
           <button data-decrease class="button-svg">
             <svg class="icon-minus">
               <use href="./images/sprite/sprite.svg#icon-minus"></use>
@@ -123,7 +123,7 @@
             />
           </picture>
         </div>
-        <div id="counter-1" class="product-quantity">
+        <div id="counter-3" class="product-quantity">
           <button data-decrease class="button-svg">
             <svg class="icon-minus">
               <use href="./images/sprite/sprite.svg#icon-minus"></use>
@@ -142,9 +142,9 @@
       </li>
     </ul>
     <div class="total-price">
-      <p>Total price - 50$</p>
+      <p>Total price - <span data-total-price>0</span>$</p>
     </div>
-    <button type="button" class="buy-button buy-button__modal">Buy</button>
+    <button type="submit" class="buy-button buy-button__modal js-buy-button-modal">Buy</button>
     <button data-modal-buy-close type="button" class="modal-close">
       <svg class="modal-close__icon">
         <use

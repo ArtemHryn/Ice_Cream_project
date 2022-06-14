@@ -33,9 +33,9 @@
     width: 218px;
     margin-bottom: 20px;
     text-transform: uppercase;
-    animation: bounceIn;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+    // animation: bounceIn;
+    // animation-duration: 2s;
+    // animation-iteration-count: infinite;
     @include fontTitanOne(
       $familyTitanOne,
       26px,
@@ -122,7 +122,6 @@
   @media screen and (min-width: 1279.98px) {
     right: 43%;
   }
-
   &::before {
     content: '';
     display: block;
@@ -134,7 +133,7 @@
     right: -90px;
     z-index: -1;
     border-radius: 50%;
-    animation: Beat;
+    animation: zoomInDown;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 
