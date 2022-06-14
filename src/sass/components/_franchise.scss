@@ -1,48 +1,5 @@
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  @include transition(opacity);
-  @include transition(visibility);
-  z-index: 41;
-}
-
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  padding: 40px;
-  max-width: 90vw;
-  min-height: 581px;
-  max-height: 700px;
-  transform: translate(-50%, -50%) scale(1);
-  @include transition(transform, 1000ms);
-
-  background-image: linear-gradient(to left, #aad491, $hero-bck);
-  border-radius: 22px;
-  @media screen and (max-width: $max-tablet-size) {
-    padding: 10px;
-  }
-  @media screen and (min-width: $min-tablet-size) {
-    max-width: 650px;
-  }
-  @media screen and (min-width: $min-desktop-size) {
-    max-width: 850px;
-    min-height: 609px;
-  }
-}
-
 .franchise {
+    @include centeredFlex();
   width: 100%;
   height: 85%;
   margin-bottom: 8px;
@@ -95,6 +52,13 @@
   stroke: currentColor;
 }
 
+.franchise__thumb {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
 .franchise__title {
     margin-bottom: 25px;
     font-family: $familyTitanOne;
@@ -134,9 +98,8 @@
 
 .franchise__item {
     padding: 15px;
-    width: calc(100% / 2 - 20px);
+    width: calc((100% - 10px) / 2);
     height: auto;
-    align-items: center;
     background-color: $primary-text-color;
     border-radius: 22px;
     box-shadow: 0px 10px 10px $heroButtonDarkPink;
@@ -148,6 +111,10 @@
     &:not(:nth-last-child(-n + 2)) {
          margin-bottom: 10px;
       }
+
+    @media screen and (max-width: $max-tablet-size) {
+        max-width: 250px;
+    }
 }
 
 .franchise__name {
