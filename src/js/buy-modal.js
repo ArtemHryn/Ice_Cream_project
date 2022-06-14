@@ -20,5 +20,8 @@
     refs.body.classList.toggle('no-scroll');
     document.querySelector('[data-total-price]').textContent = 0;
     document.querySelector('[data-value]').textContent = 0;
+    for (let i = 1; i < 4; i += 1) {
+      document.querySelector(`.js-value-${i}`).textContent = 0;
+    }
   }
 })();

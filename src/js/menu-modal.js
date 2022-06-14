@@ -14,7 +14,7 @@
   refs.closeModalbuy.addEventListener('click', toggleModal);
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
-    refs.body.classList.toggle('no-scroll');
+    refs.body.classList.toggle('no-scroll-not-for-Yura');
     refs.buyButton.classList.toggle('hide-button');
   }
 })();
