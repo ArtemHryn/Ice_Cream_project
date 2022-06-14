@@ -199,16 +199,15 @@
     font-size: 16px;
     line-height: 1.3;
   }
-  @include transition(background-color);
+  // @include transition(background-color);
+
+  @include btnAnimation($heroBtnHover, 22px);
+
   &:hover,
   &:focus {
     background-color: $accent-color;
     color: $heroButtonWhite;
-    .about__icon-arrow {
-      @include transition(fill);
-      fill: white;
-    }
-    // background-color: $btn-hover-bck;
+     
   }
 }
 
@@ -216,7 +215,7 @@
   display: inline-block;
   width: 8px;
   height: 12px;
-  fill: #d41443;
+  fill: currentColor;
 
   margin-left: 13px;
 }
