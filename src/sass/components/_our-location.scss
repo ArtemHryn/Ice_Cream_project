@@ -24,6 +24,7 @@
   padding: 40px;
   max-width: 90vw;
   min-height: 581px;
+  max-height: 700px;
   transform: translate(-50%, -50%) scale(1);
   @include transition(transform, 1000ms);
 
@@ -34,7 +35,6 @@
   }
   @media screen and (min-width: $min-tablet-size) {
     max-width: 650px;
-    min-height: 609px;
   }
   @media screen and (min-width: $min-desktop-size) {
     max-width: 850px;
@@ -95,5 +95,13 @@
 }
 
 .our-location__text {
-  @include fontRegular(DM Sans, 32px, 700, 40px, $accent-color, center);
+  width: 60%;
+  margin: auto;
+  @include fontRegular(null, 16px, 700, 22px, $accent-color, center);
+  @media screen and (min-width: $min-tablet-size) {
+    @include fontRegular(null, 32px, 700, 40px, $accent-color, center);
+  }
+  @media screen and (min-width: $min-desktop-size) {
+    @include fontRegular(null, 32px, 700, 40px, $accent-color, center);
+  }
 }
