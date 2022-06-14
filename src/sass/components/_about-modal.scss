@@ -53,17 +53,6 @@
   width: 90vw;
   height: 100vh;
 }
-@media screen and (min-width: 480px) {
-  .modal {
-    width: 450px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .modal {
-    width: 528px;
-  }
-}
-
 
   @keyframes gradient {
     0% {
@@ -76,7 +65,11 @@
       background-position: 0% 50%;
     }
   }
-  
+
+  .about__title-modal{
+    animation-iteration-count: 1;
+  }
+
   .modal-about-img {
     max-height: 40vh;
     @media screen and (min-width:$min-tablet-size) {
@@ -94,11 +87,9 @@
   .modal-about__text{
     margin-left: 20px;
         
-    @include fontRegular(DM Sans, 12px, 500, 19px, $secondary-text-color);
+    @include fontRegular(DM Sans, 14px, 500, 25px, $secondary-text-color);
     margin-bottom: 10px;
-    @media screen and (min-width: $min-tablet-size) {
-      @include fontRegular(DM Sans, 14px, 500, 25px, $secondary-text-color);
-    }
+    
     @media screen and (min-width: $min-desktop-size) {
       @include fontRegular(DM Sans, 14px, 500, 27px, $secondary-text-color);
       margin-bottom: 15px;
