@@ -1,0 +1,172 @@
+.franchise {
+    @include centeredFlex();
+  width: 100%;
+  height: 85%;
+  margin-bottom: 8px;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.franchise__ice-cream {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%, 20%);
+  width: 100px;
+  @media screen and (max-width: $max-tablet-size) {
+    transform: translate(-20%, 20%);
+  }
+}
+
+.franchise__milkshake {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 20%);
+  width: 100px;
+  @media screen and (max-width: $max-tablet-size) {
+    transform: translate(20%, 20%);
+  }
+}
+
+.franchise__close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+  background-color: transparent;
+  color: $primary-text-color;
+  @include transition(background-color, 350ms);
+  &:hover,
+  &:focus {
+    background-color: rgba(170, 212, 145, 1);
+    color: $description-text-color;
+  }
+}
+
+.franchise__icon-close {
+  stroke: currentColor;
+}
+
+.franchise__thumb {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.franchise__title {
+    margin-bottom: 25px;
+    font-family: $familyTitanOne;
+    font-style: normal;
+    text-align: center;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $accent-color;
+
+    @media screen and (min-width: $min-tablet-size) {
+        font-weight: 400;
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: $min-desktop-size) {
+        font-weight: 500;
+        font-size: 28px;
+    } 
+}
+
+.francise__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $min-tablet-size) {
+        margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: $min-desktop-size) {
+         margin-bottom: 50px;
+    } 
+}
+
+.franchise__item {
+    padding: 15px;
+    width: calc((100% - 10px) / 2);
+    height: auto;
+    background-color: $primary-text-color;
+    border-radius: 22px;
+    box-shadow: 0px 10px 10px $heroButtonDarkPink;
+
+    &:nth-child(even) {
+        margin-left: 10px;
+    }
+
+    &:not(:nth-last-child(-n + 2)) {
+         margin-bottom: 10px;
+      }
+
+    @media screen and (max-width: $max-tablet-size) {
+        max-width: 250px;
+    }
+}
+
+.franchise__name {
+    margin-bottom: 10px;
+    font-family: $familyTitanOne;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $menu_backgraund_color;
+
+    @media screen and (min-width: $min-tablet-size) {
+        font-weight: 300;
+        font-size: 22px;
+    }
+
+    @media screen and (min-width: $min-desktop-size) {
+        font-weight: 500;
+        font-size: 28px;
+    } 
+}
+
+.franchise__description {
+    font-family: $familyDmSans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 156%;
+    color: $accent-color;
+
+    @media screen and (min-width: $min-tablet-size) {
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    @media screen and (min-width: $min-desktop-size) {
+        font-weight: 500;
+        font-size: 16px;
+    } 
+}
+
+.franchise__text {
+  width: 60%;
+  margin: auto;
+  @include fontRegular(null, 22px, 700, 22px, $accent-color, center);
+  @media screen and (min-width: $min-tablet-size) {
+    @include fontRegular(null, 28px, 700, 40px, $accent-color, center);
+  }
+  @media screen and (min-width: $min-desktop-size) {
+    @include fontRegular(null, 32px, 700, 40px, $accent-color, center);
+  }
+}
