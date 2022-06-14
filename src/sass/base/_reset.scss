@@ -75,6 +75,10 @@ a {
   }
 }
 
+.no-scroll-not-for-Yura {
+  overflow: hidden;
+}
+
 .hide-button {
   @media screen and (max-width: $max-desktop-size) {
     position: absolute;
