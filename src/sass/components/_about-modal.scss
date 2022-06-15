@@ -7,7 +7,7 @@
   background-color: $backdrop-bkgd-color;
   z-index: 99;
   opacity: 1;
-  @include transition((opacity, background-color));
+  @include transition((opacity, background-color), 1000ms);
 }
 
 .backdrop-about.is-hidden {
@@ -29,7 +29,7 @@
   left: 50%;
 
   transform: translate(-50%, -50%) scale(1);
-  @include transition(transform);
+  @include transition(transform, 1000ms);
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);

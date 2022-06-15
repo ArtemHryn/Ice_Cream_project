@@ -7,7 +7,7 @@
   background-color: $backdrop-bkgd-color;
   z-index: 99;
   opacity: 1;
-  @include transition((opacity, background-color));
+  @include transition((opacity, background-color), 1000ms);
 }
 
 .backdrop-buy.is-hidden {
