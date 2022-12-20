@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://ArtemHryn.github.io/project_group_5",
+  "homepage": "https://artemhryn.github.io/Ice_Cream_project/",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /project_group_5/"
+    "build": "parcel build src/*.html --public-url /Ice_Cream_project/"
   },
   "repository": {
     "type": "git",
